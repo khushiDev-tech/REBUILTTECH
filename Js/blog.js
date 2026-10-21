@@ -18,79 +18,60 @@ document.addEventListener("DOMContentLoaded", () => {
   ======================================================== */
 
   const blogs = [
-
     {
-      id: 1,
-      image: "Power-Systems.png",
-      date: "25 Sep 2026",
-      category: "Industry Trends",
-      title:
-        "The Future of Power Distribution in India: Key Trends to Watch",
-      description:
-        "Explore emerging technologies, smart grids and modern infrastructure developments shaping the future of power distribution in India.",
-      link: ""
+      "id": 1,
+      "image": "Power-Systems.png",
+      "date": "25 Sep 2026",
+      "category": "Industry Trends",
+      "title": "The Future of Power Distribution in India: Key Trends to Watch",
+      "description": "India’s power sector is entering a new era. With rising demand from industries, smart cities, and households, the way electricity is distributed will define the nation’s growth story....",
+      "link": "blog-power-distribution.html"
     },
-
     {
-      id: 2,
-      image: "Earthing-Protection.png",
-      date: "18 Sep 2026",
-      category: "Safety & Compliance",
-      title:
-        "Top 10 Electrical Safety Practices for Industrial Sites",
-      description:
-        "Discover essential electrical safety practices that help protect workers, reduce operational risks and maintain safer industrial environments.",
-      link: ""
+      "id": 2,
+      "image": "Earthing-Protection.png",
+      "date": "18 Sep 2026",
+      "category": "Safety & Compliance",
+      "title": "Top 10 Electrical Safety Practices for Industrial Sites",
+      "description": "Electrical safety isn’t just a checklist — it’s the foundation of every successful industrial operation. In high-power environments, even a minor oversight can lead to serious hazards....",
+      "link": "blog-electrical-safety.html"
     },
-
     {
-      id: 3,
-      image: "electrical-panel.png",
-      date: "12 Sep 2026",
-      category: "Substation & Transmission",
-      title:
-        "Understanding Substation Components and Their Role",
-      description:
-        "Learn about the major components of electrical substations and how they support reliable power transmission and distribution.",
-      link: ""
+      "id": 3,
+      "image": "electrical-panel.png",
+      "date": "12 Sep 2026",
+      "category": "Substation & Transmission",
+      "title": "Understanding Substation Components and Their Role",
+      "description": "Modern industries depend on substations to deliver stable, efficient, and safe electrical power. A wellengineered substation is not just a collection of equipment — it’s a coordinated...",
+      "link": "blog-substation-components.html"
     },
-
     {
-      id: 4,
-      image: "Electrical-Infrastructure.png",
-      date: "08 Sep 2026",
-      category: "Electrical Solutions",
-      title:
-        "Renewable Energy Integration: Opportunities & Challenges",
-      description:
-        "Understand the opportunities and technical challenges involved in integrating renewable energy into modern electrical networks.",
-      link: ""
+      "id": 4,
+      "image": "Electrical-Infrastructure.png",
+      "date": "08 Sep 2026",
+      "category": "Electrical Solutions",
+      "title": "Renewable Energy Integration: Opportunities & Challenges",
+      "description": "India’s energy landscape is shifting rapidly toward sustainability. As industries and utilities embrace solar, wind, and hybrid systems, renewable integration has become both a technical...",
+      "link": "blog-renewable-energy.html"
     },
-
     {
-      id: 5,
-      image: "electrical-panel.png",
-      date: "03 Sep 2026",
-      category: "Tips & Guides",
-      title:
-        "A Beginner's Guide to Electrical Panel Maintenance",
-      description:
-        "Explore practical maintenance tips for electrical panels to support safety, efficiency and dependable electrical performance.",
-      link: ""
+      "id": 5,
+      "image": "electrical-panel.png",
+      "date": "03 Sep 2026",
+      "category": "Tips & Guides",
+      "title": "A Beginner’s Guide to Electrical Panel Maintenance",
+      "description": "Electrical panels are the nerve center of any industrial or commercial facility. They distribute power, protect circuits, and ensure smooth operation. Proper maintenance isn’t just about...",
+      "link": "blog-panel-maintenance.html"
     },
-
     {
-      id: 6,
-      image: "Lighting-Solutions.png",
-      date: "28 Aug 2026",
-      category: "Project Insights",
-      title:
-        "How to Choose the Right Electrical Partner for Your Project",
-      description:
-        "Discover important factors to consider when selecting an electrical engineering partner for commercial and industrial projects.",
-      link: ""
+      "id": 6,
+      "image": "Lighting-Solutions.png",
+      "date": "28 Aug 2026",
+      "category": "Project Insights",
+      "title": "How to Choose the Right Electrical Partner for Your Project",
+      "description": "Selecting the right electrical partner can make or break your project’s success. Whether you’re building an industrial facility, upgrading infrastructure, or integrating renewable...",
+      "link": "blog-electrical-partner.html"
     }
-
   ];
 
 

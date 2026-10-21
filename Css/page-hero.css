@@ -1,4 +1,5 @@
 /* Shared inner-page hero sizing. Home intentionally keeps its own hero. */
+
 :root {
   --page-hero-height: 500px;
   --page-hero-title-size: 56px;
@@ -8,6 +9,7 @@
 }
 
 /* Higher specificity than page-specific hero rules at every breakpoint. */
+
 main > :is(.about-reference-hero, .services-hero, .project-hero, .blog-hero, .contact-hero) h1 {
   font-family: "Poppins", sans-serif;
   font-size: var(--page-hero-title-size);
@@ -51,6 +53,7 @@ main > :is(.about-reference-hero, .services-hero, .project-hero, .blog-hero, .co
 }
 
 /* Mask the artwork's baked-in heading and replace it with responsive HTML. */
+
 .about-reference-hero {
   display: flex;
   align-items: center;

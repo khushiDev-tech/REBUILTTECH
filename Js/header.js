@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function () {
     window.location.pathname.split("/").pop() || "index.html";
 
   document.querySelectorAll(".nav-links a").forEach(link => {
-    if (link.getAttribute("href") === (["residentaial.html", "commercial.html", "industrial.html", "infrastructure.html"].includes(currentPage) ? "service.html" : currentPage)) {
+    if (link.getAttribute("href") === (currentPage.startsWith("blog-") ? "blog.html" : ["residentaial.html", "commercial.html", "industrial.html", "infrastructure.html"].includes(currentPage) ? "service.html" : currentPage)) {
       link.classList.add("active");
       link.setAttribute("aria-current", "page");
     }

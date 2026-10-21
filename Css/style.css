@@ -1,5 +1,8 @@
 :root {
   --font-primary: "Poppins", sans-serif;
+  --navy: #082d63;
+  --navy-dark: #061f47;
+  --orange: #f15a24;
 }
 
 body {
@@ -8,23 +11,21 @@ body {
   padding: 0;
 }
 
-h1, h2, h3, h4, h5, h6,
-p, a, button, input, textarea {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+button,
+input,
+textarea {
   font-family: var(--font-primary);
 }
 
-
-
-
-/* =========================================
-   REBUILT TECHZ - HERO SECTION
-========================================= */
-
-:root {
-  --navy: #082d63;
-  --navy-dark: #061f47;
-  --orange: #f15a24;
-}
+/* REBUILT TECHZ - HERO SECTION */
 
 .hero {
   position: relative;
@@ -54,8 +55,7 @@ p, a, button, input, textarea {
   background-size: cover;
   background-repeat: no-repeat;
   transform: scale(1);
-  transition:
-    opacity 1.2s ease,
+  transition: opacity 1.2s ease,
     visibility 1.2s ease,
     transform 6s ease;
 }
@@ -211,9 +211,7 @@ p, a, button, input, textarea {
   transform: translateY(-3px);
 }
 
-/* =========================================
-   BACK TO TOP ARROW
-========================================= */
+/* BACK TO TOP ARROW */
 
 .back-to-top {
   position: fixed;
@@ -249,9 +247,7 @@ p, a, button, input, textarea {
   transform: translateY(-4px);
 }
 
-/* =========================================
-   RESPONSIVE - TABLET
-========================================= */
+/* RESPONSIVE - TABLET */
 
 @media (max-width: 991px) {
   .hero {
@@ -271,9 +267,7 @@ p, a, button, input, textarea {
   }
 }
 
-/* =========================================
-   RESPONSIVE - MOBILE
-========================================= */
+/* RESPONSIVE - MOBILE */
 
 @media (max-width: 767px) {
   .hero {
@@ -314,7 +308,7 @@ p, a, button, input, textarea {
   }
 
   .hero-primary-btn,
-  .hero-secondary-btn {
+    .hero-secondary-btn {
     min-height: 48px;
     padding: 0 18px;
     font-size: 12px;
@@ -339,23 +333,19 @@ p, a, button, input, textarea {
   }
 
   .hero-primary-btn,
-  .hero-secondary-btn {
+    .hero-secondary-btn {
     width: 100%;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .hero-slide,
-  .back-to-top {
+    .back-to-top {
     transition: none;
   }
 }
 
-
-
-/* ==========================================
-   ABOUT SECTION - REBUILT TECHZ
-========================================== */
+/* ABOUT SECTION - REBUILT TECHZ */
 
 .about-sec {
   position: relative;
@@ -398,9 +388,7 @@ p, a, button, input, textarea {
   z-index: 0;
 }
 
-/* ==========================================
-   ABOUT MAIN GRID
-========================================== */
+/* ABOUT MAIN GRID */
 
 .about-wrap {
   position: relative;
@@ -418,9 +406,7 @@ p, a, button, input, textarea {
   min-width: 0;
 }
 
-/* ==========================================
-   ABOUT HEADING
-========================================== */
+/* ABOUT HEADING */
 
 .about-kicker {
   display: flex;
@@ -456,9 +442,7 @@ p, a, button, input, textarea {
   color: var(--orange);
 }
 
-/* ==========================================
-   ABOUT DESCRIPTION
-========================================== */
+/* ABOUT DESCRIPTION */
 
 .about-copy {
   max-width: 100%;
@@ -472,9 +456,7 @@ p, a, button, input, textarea {
   line-height: 1.85;
 }
 
-/* ==========================================
-   ABOUT FEATURES
-========================================== */
+/* ABOUT FEATURES */
 
 .about-points {
   width: 100%;
@@ -519,9 +501,7 @@ p, a, button, input, textarea {
   line-height: 1.6;
 }
 
-/* ==========================================
-   ABOUT CTA BUTTON
-========================================== */
+/* ABOUT CTA BUTTON */
 
 .about-cta {
   height: 49px;
@@ -533,8 +513,7 @@ p, a, button, input, textarea {
   color: #ffffff;
   text-decoration: none;
   box-shadow: 0 8px 22px rgba(8, 45, 99, 0.14);
-  transition:
-    transform 0.3s ease,
+  transition: transform 0.3s ease,
     box-shadow 0.3s ease;
 }
 
@@ -560,9 +539,7 @@ p, a, button, input, textarea {
   box-shadow: 0 12px 28px rgba(8, 45, 99, 0.22);
 }
 
-/* ==========================================
-   ABOUT MAIN IMAGE
-========================================== */
+/* ABOUT MAIN IMAGE */
 
 .about-main-img {
   width: 100%;
@@ -578,8 +555,7 @@ p, a, button, input, textarea {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  transition:
-    opacity 0.25s ease,
+  transition: opacity 0.25s ease,
     transform 0.3s ease;
 }
 
@@ -588,9 +564,7 @@ p, a, button, input, textarea {
   transform: scale(0.98);
 }
 
-/* ==========================================
-   ABOUT IMAGE THUMBNAILS
-========================================== */
+/* ABOUT IMAGE THUMBNAILS */
 
 .about-thumbs {
   display: grid;
@@ -638,9 +612,7 @@ p, a, button, input, textarea {
   outline-offset: 3px;
 }
 
-/* ==========================================
-   ABOUT COMPANY STATS
-========================================== */
+/* ABOUT COMPANY STATS */
 
 .about-stats-row {
   width: 100%;
@@ -697,9 +669,7 @@ p, a, button, input, textarea {
   line-height: 1.5;
 }
 
-/* ==========================================
-   ABOUT BOTTOM INFORMATION PANEL
-========================================== */
+/* ABOUT BOTTOM INFORMATION PANEL */
 
 .about-info-panel {
   position: relative;
@@ -708,8 +678,7 @@ p, a, button, input, textarea {
   margin: 35px auto 0;
   padding: 30px;
   display: grid;
-  grid-template-columns:
-    minmax(0, 0.85fr)
+  grid-template-columns: minmax(0, 0.85fr)
     minmax(0, 1.4fr);
   gap: 30px;
   border-radius: 13px;
@@ -720,9 +689,7 @@ p, a, button, input, textarea {
   );
 }
 
-/* ==========================================
-   CERTIFICATIONS
-========================================== */
+/* CERTIFICATIONS */
 
 .about-certified {
   min-width: 0;
@@ -776,9 +743,7 @@ p, a, button, input, textarea {
   line-height: 1.8;
 }
 
-/* ==========================================
-   CORE VALUES
-========================================== */
+/* CORE VALUES */
 
 .about-values {
   min-width: 0;
@@ -819,17 +784,14 @@ p, a, button, input, textarea {
   line-height: 1.7;
 }
 
-/* ==========================================
-   ABOUT SCROLL ANIMATION
-========================================== */
+/* ABOUT SCROLL ANIMATION */
 
 .about-sec.about-animate-ready .about-left,
 .about-sec.about-animate-ready .about-right,
 .about-sec.about-animate-ready .about-info-panel {
   opacity: 0;
   transform: translateY(25px);
-  transition:
-    opacity 0.7s ease,
+  transition: opacity 0.7s ease,
     transform 0.7s ease;
 }
 
@@ -848,9 +810,7 @@ p, a, button, input, textarea {
   transition-delay: 0.2s;
 }
 
-/* ==========================================
-   RESPONSIVE - TABLET
-========================================== */
+/* RESPONSIVE - TABLET */
 
 @media (max-width: 1050px) {
   .about-wrap {
@@ -874,9 +834,7 @@ p, a, button, input, textarea {
   }
 }
 
-/* ==========================================
-   RESPONSIVE - MOBILE
-========================================== */
+/* RESPONSIVE - MOBILE */
 
 @media (max-width: 700px) {
   .about-sec {
@@ -884,7 +842,7 @@ p, a, button, input, textarea {
   }
 
   .about-wrap,
-  .about-info-panel {
+    .about-info-panel {
     width: 90%;
   }
 
@@ -926,9 +884,7 @@ p, a, button, input, textarea {
   }
 }
 
-/* ==========================================
-   RESPONSIVE - SMALL MOBILE
-========================================== */
+/* RESPONSIVE - SMALL MOBILE */
 
 @media (max-width: 450px) {
   .about-left h2 {
@@ -983,18 +939,14 @@ p, a, button, input, textarea {
 
 @media (prefers-reduced-motion: reduce) {
   .about-sec.about-animate-ready .about-left,
-  .about-sec.about-animate-ready .about-right,
-  .about-sec.about-animate-ready .about-info-panel,
-  .about-main-img img {
+    .about-sec.about-animate-ready .about-right,
+    .about-sec.about-animate-ready .about-info-panel,
+    .about-main-img img {
     transition: none;
   }
 }
 
-
-
-/* ==========================================
-   SERVICES SECTION - REBUILT TECHZ
-========================================== */
+/* SERVICES SECTION - REBUILT TECHZ */
 
 .services-sec {
   position: relative;
@@ -1011,9 +963,7 @@ p, a, button, input, textarea {
   box-sizing: border-box;
 }
 
-/* ==========================================
-   SECTION HEADER
-========================================== */
+/* SECTION HEADER */
 
 .services-head {
   width: min(1180px, 90%);
@@ -1068,9 +1018,7 @@ p, a, button, input, textarea {
   line-height: 1.8;
 }
 
-/* ==========================================
-   SERVICES GRID
-========================================== */
+/* SERVICES GRID */
 
 .services-grid {
   width: min(1450px, 94%);
@@ -1080,9 +1028,7 @@ p, a, button, input, textarea {
   gap: 18px;
 }
 
-/* ==========================================
-   SERVICE CARD
-========================================== */
+/* SERVICE CARD */
 
 .service-card {
   position: relative;
@@ -1098,8 +1044,7 @@ p, a, button, input, textarea {
   background: #ffffff;
   overflow: hidden;
   isolation: isolate;
-  transition:
-    transform 0.3s ease,
+  transition: transform 0.3s ease,
     box-shadow 0.3s ease,
     border-color 0.3s ease;
 }
@@ -1110,9 +1055,7 @@ p, a, button, input, textarea {
   box-shadow: 0 18px 38px rgba(8, 45, 99, 0.12);
 }
 
-/* ==========================================
-   SERVICE ICON
-========================================== */
+/* SERVICE ICON */
 
 .service-icon-box {
   width: 125px;
@@ -1134,8 +1077,7 @@ p, a, button, input, textarea {
 }
 
 .service-icon-box i {
-  transition:
-    transform 0.35s ease,
+  transition: transform 0.35s ease,
     color 0.35s ease;
 }
 
@@ -1144,9 +1086,7 @@ p, a, button, input, textarea {
   color: var(--orange);
 }
 
-/* ==========================================
-   SERVICE CONTENT
-========================================== */
+/* SERVICE CONTENT */
 
 .service-card-content {
   min-width: 0;
@@ -1177,9 +1117,7 @@ p, a, button, input, textarea {
   font-weight: 400;
 }
 
-/* ==========================================
-   CORNER ARROW
-========================================== */
+/* CORNER ARROW */
 
 .service-corner {
   position: absolute;
@@ -1227,9 +1165,7 @@ p, a, button, input, textarea {
   outline-offset: -3px;
 }
 
-/* ==========================================
-   FULL CARD IMAGE HOVER
-========================================== */
+/* FULL CARD IMAGE HOVER */
 
 .service-card::before {
   content: "";
@@ -1266,17 +1202,14 @@ p, a, button, input, textarea {
   opacity: 1;
 }
 
-/* ==========================================
-   SCROLL ANIMATION
-========================================== */
+/* SCROLL ANIMATION */
 
 /* Hidden only after JS enables animation */
 
 .services-sec.services-animate-ready .service-card {
   opacity: 0;
   transform: translateY(30px);
-  transition:
-    opacity 0.6s ease,
+  transition: opacity 0.6s ease,
     transform 0.6s ease,
     box-shadow 0.3s ease,
     border-color 0.3s ease;
@@ -1324,9 +1257,8 @@ p, a, button, input, textarea {
 .services-sec .service-card-content {
   min-width: 0;
 }
-/* ==========================================
-   TABLET
-========================================== */
+
+/* TABLET */
 
 @media (max-width: 1100px) {
   .services-grid {
@@ -1344,9 +1276,7 @@ p, a, button, input, textarea {
   }
 }
 
-/* ==========================================
-   MOBILE
-========================================== */
+/* MOBILE */
 
 @media (max-width: 700px) {
   .services-sec {
@@ -1409,9 +1339,7 @@ p, a, button, input, textarea {
   }
 }
 
-/* ==========================================
-   SMALL MOBILE
-========================================== */
+/* SMALL MOBILE */
 
 @media (max-width: 450px) {
   .service-card {
@@ -1433,8 +1361,8 @@ p, a, button, input, textarea {
 
 @media (prefers-reduced-motion: reduce) {
   .service-card,
-  .service-card::before,
-  .service-card::after {
+    .service-card::before,
+    .service-card::after {
     transition: none !important;
   }
 
@@ -1444,10 +1372,7 @@ p, a, button, input, textarea {
   }
 }
 
-
-/* ==========================================
-   WORK PROCESS SECTION
-========================================== */
+/* WORK PROCESS SECTION */
 
 .process-sec {
   position: relative;
@@ -1495,9 +1420,7 @@ p, a, button, input, textarea {
   pointer-events: none;
 }
 
-/* ==========================================
-   SECTION HEADING
-========================================== */
+/* SECTION HEADING */
 
 .process-head {
   max-width: 850px;
@@ -1556,9 +1479,7 @@ p, a, button, input, textarea {
   line-height: 1.75;
 }
 
-/* ==========================================
-   PROCESS GRID
-========================================== */
+/* PROCESS GRID */
 
 .process-wrapper {
   position: relative;
@@ -1586,9 +1507,7 @@ p, a, button, input, textarea {
   z-index: 0;
 }
 
-/* ==========================================
-   PROCESS ITEM
-========================================== */
+/* PROCESS ITEM */
 
 .process-item {
   position: relative;
@@ -1625,8 +1544,7 @@ p, a, button, input, textarea {
   font-size: 39px;
   box-shadow: 0 10px 25px rgba(8,45,99,0.14);
   z-index: 3;
-  transition:
-    transform 0.35s ease,
+  transition: transform 0.35s ease,
     box-shadow 0.35s ease;
 }
 
@@ -1681,9 +1599,7 @@ p, a, button, input, textarea {
   z-index: 5;
 }
 
-/* ==========================================
-   PROCESS CARD
-========================================== */
+/* PROCESS CARD */
 
 .process-card {
   position: relative;
@@ -1699,8 +1615,7 @@ p, a, button, input, textarea {
   text-align: center;
   box-shadow: 0 12px 35px rgba(8,45,99,0.07);
   overflow: hidden;
-  transition:
-    transform 0.35s ease,
+  transition: transform 0.35s ease,
     box-shadow 0.35s ease;
 }
 
@@ -1716,8 +1631,7 @@ p, a, button, input, textarea {
   background: var(--navy);
   transform: scaleX(0.25);
   transform-origin: center;
-  transition:
-    transform 0.35s ease,
+  transition: transform 0.35s ease,
     background 0.35s ease;
 }
 
@@ -1777,9 +1691,7 @@ p, a, button, input, textarea {
   line-height: 1;
 }
 
-/* ==========================================
-   HOVER EFFECTS
-========================================== */
+/* HOVER EFFECTS */
 
 .process-item:hover .process-icon {
   transform: translateY(-6px) rotate(-2deg);
@@ -1796,23 +1708,19 @@ p, a, button, input, textarea {
   background: var(--orange);
 }
 
-/* ==========================================
-   SCROLL ANIMATION
-========================================== */
+/* SCROLL ANIMATION */
 
 .process-sec.process-animate-ready .process-head {
   opacity: 0;
   transform: translateY(22px);
-  transition:
-    opacity 0.65s ease,
+  transition: opacity 0.65s ease,
     transform 0.65s ease;
 }
 
 .process-sec.process-animate-ready .process-item {
   opacity: 0;
   transform: translateY(35px);
-  transition:
-    opacity 0.6s ease,
+  transition: opacity 0.6s ease,
     transform 0.6s ease;
 }
 
@@ -1842,9 +1750,7 @@ p, a, button, input, textarea {
   transition-delay: 0.40s;
 }
 
-/* ==========================================
-   TABLET
-========================================== */
+/* TABLET */
 
 @media (max-width: 1050px) {
   .process-wrapper {
@@ -1853,7 +1759,7 @@ p, a, button, input, textarea {
   }
 
   .process-connect-line,
-  .process-arrow {
+    .process-arrow {
     display: none;
   }
 
@@ -1862,9 +1768,7 @@ p, a, button, input, textarea {
   }
 }
 
-/* ==========================================
-   MOBILE
-========================================== */
+/* MOBILE */
 
 @media (max-width: 650px) {
   .process-sec {
@@ -1920,29 +1824,23 @@ p, a, button, input, textarea {
 
 @media (prefers-reduced-motion: reduce) {
   .process-icon,
-  .process-card,
-  .process-card::after,
-  .process-sec.process-animate-ready .process-head,
-  .process-sec.process-animate-ready .process-item {
+    .process-card,
+    .process-card::after,
+    .process-sec.process-animate-ready .process-head,
+    .process-sec.process-animate-ready .process-item {
     transition: none;
   }
 
   .process-sec.process-animate-ready .process-head,
-  .process-sec.process-animate-ready .process-item {
+    .process-sec.process-animate-ready .process-item {
     opacity: 1;
     transform: none;
   }
 }
 
+/* WHY CHOOSE US SECTION */
 
-
-/* ==========================================
-   WHY CHOOSE US SECTION
-========================================== */
-
-/* ==========================================
-   PARALLAX CTA SECTION
-========================================== */
+/* PARALLAX CTA SECTION */
 
 .parallax-cta {
   position: relative;
@@ -1968,9 +1866,7 @@ p, a, button, input, textarea {
   box-sizing: border-box;
 }
 
-/* ==========================================
-   NAVY OVERLAY
-========================================== */
+/* NAVY OVERLAY */
 
 .parallax-cta-overlay {
   position: absolute;
@@ -1985,9 +1881,7 @@ p, a, button, input, textarea {
   pointer-events: none;
 }
 
-/* ==========================================
-   CONTENT
-========================================== */
+/* CONTENT */
 
 .parallax-cta-content {
   position: relative;
@@ -1998,9 +1892,7 @@ p, a, button, input, textarea {
   color: #ffffff;
 }
 
-/* ==========================================
-   KICKER
-========================================== */
+/* KICKER */
 
 .parallax-cta-kicker {
   display: flex;
@@ -2024,9 +1916,7 @@ p, a, button, input, textarea {
   letter-spacing: 0.6px;
 }
 
-/* ==========================================
-   HEADING
-========================================== */
+/* HEADING */
 
 .parallax-cta h2 {
   margin: 0;
@@ -2041,9 +1931,7 @@ p, a, button, input, textarea {
   color: var(--orange);
 }
 
-/* ==========================================
-   DESCRIPTION
-========================================== */
+/* DESCRIPTION */
 
 .parallax-cta-text {
   max-width: 700px;
@@ -2054,9 +1942,7 @@ p, a, button, input, textarea {
   font-weight: 400;
 }
 
-/* ==========================================
-   BUTTONS
-========================================== */
+/* BUTTONS */
 
 .parallax-cta-buttons {
   margin-top: 35px;
@@ -2079,8 +1965,7 @@ p, a, button, input, textarea {
   text-decoration: none;
   font-size: 14px;
   font-weight: 600;
-  transition:
-    transform 0.3s ease,
+  transition: transform 0.3s ease,
     background 0.3s ease,
     border-color 0.3s ease,
     box-shadow 0.3s ease;
@@ -2120,9 +2005,7 @@ p, a, button, input, textarea {
   font-size: 15px;
 }
 
-/* ==========================================
-   FEATURES
-========================================== */
+/* FEATURES */
 
 .parallax-cta-features {
   max-width: 760px;
@@ -2159,9 +2042,7 @@ p, a, button, input, textarea {
   background: rgba(255,255,255,0.25);
 }
 
-/* ==========================================
-   BOTTOM ARROW
-========================================== */
+/* BOTTOM ARROW */
 
 .parallax-scroll-arrow {
   width: 38px;
@@ -2185,15 +2066,12 @@ p, a, button, input, textarea {
   }
 }
 
-/* ==========================================
-   SCROLL ANIMATION
-========================================== */
+/* SCROLL ANIMATION */
 
 .parallax-cta.cta-animate-ready .parallax-cta-content {
   opacity: 0;
   transform: translateY(35px);
-  transition:
-    opacity 0.8s ease,
+  transition: opacity 0.8s ease,
     transform 0.8s ease;
 }
 
@@ -2202,9 +2080,7 @@ p, a, button, input, textarea {
   transform: translateY(0);
 }
 
-/* ==========================================
-   TABLET
-========================================== */
+/* TABLET */
 
 @media (max-width: 900px) {
   .parallax-cta {
@@ -2225,9 +2101,7 @@ p, a, button, input, textarea {
   }
 }
 
-/* ==========================================
-   MOBILE
-========================================== */
+/* MOBILE */
 
 @media (max-width: 700px) {
   .parallax-cta {
@@ -2305,11 +2179,7 @@ p, a, button, input, textarea {
   }
 }
 
-
-
-/* ==========================================
-   TESTIMONIALS SECTION
-========================================== */
+/* TESTIMONIALS SECTION */
 
 .testimonial-sec {
   position: relative;
@@ -2360,9 +2230,7 @@ p, a, button, input, textarea {
   right: 8%;
 }
 
-/* ==========================================
-   HEADING
-========================================== */
+/* HEADING */
 
 .testimonial-head {
   max-width: 850px;
@@ -2421,9 +2289,7 @@ p, a, button, input, textarea {
   line-height: 1.7;
 }
 
-/* ==========================================
-   SLIDER
-========================================== */
+/* SLIDER */
 
 .testimonial-slider-wrap {
   position: relative;
@@ -2451,9 +2317,7 @@ p, a, button, input, textarea {
   );
 }
 
-/* ==========================================
-   CARD
-========================================== */
+/* CARD */
 
 .testimonial-card {
   flex: 0 0 calc((100% - 56px) / 3);
@@ -2464,8 +2328,7 @@ p, a, button, input, textarea {
   border-radius: 13px;
   background: #fff;
   box-shadow: 0 12px 32px rgba(8, 45, 99, 0.08);
-  transition:
-    box-shadow 0.3s ease,
+  transition: box-shadow 0.3s ease,
     border-color 0.3s ease;
 }
 
@@ -2474,9 +2337,7 @@ p, a, button, input, textarea {
   border-bottom-color: #ff7200;
 }
 
-/* ==========================================
-   CARD BODY
-========================================== */
+/* CARD BODY */
 
 .testimonial-body {
   min-height: 300px;
@@ -2518,9 +2379,7 @@ p, a, button, input, textarea {
   font-size: 15px;
 }
 
-/* ==========================================
-   CLIENT INFORMATION
-========================================== */
+/* CLIENT INFORMATION */
 
 .testimonial-user {
   min-height: 118px;
@@ -2576,9 +2435,7 @@ p, a, button, input, textarea {
   font-size: 11px;
 }
 
-/* ==========================================
-   NAVIGATION
-========================================== */
+/* NAVIGATION */
 
 .testimonial-nav {
   width: 48px;
@@ -2593,8 +2450,7 @@ p, a, button, input, textarea {
   font-size: 15px;
   cursor: pointer;
   box-shadow: 0 8px 20px rgba(8, 45, 99, 0.16);
-  transition:
-    background 0.25s ease,
+  transition: background 0.25s ease,
     transform 0.25s ease;
 }
 
@@ -2614,9 +2470,7 @@ p, a, button, input, textarea {
   outline-offset: 3px;
 }
 
-/* ==========================================
-   DOTS
-========================================== */
+/* DOTS */
 
 .testimonial-dots {
   margin-top: 27px;
@@ -2634,8 +2488,7 @@ p, a, button, input, textarea {
   border-radius: 50%;
   background: #dbe1e8;
   cursor: pointer;
-  transition:
-    background 0.25s ease,
+  transition: background 0.25s ease,
     transform 0.25s ease;
 }
 
@@ -2644,9 +2497,7 @@ p, a, button, input, textarea {
   transform: scale(1.25);
 }
 
-/* ==========================================
-   STATISTICS
-========================================== */
+/* STATISTICS */
 
 .testimonial-stats {
   margin-top: 35px;
@@ -2711,17 +2562,14 @@ p, a, button, input, textarea {
   font-size: 11px;
 }
 
-/* ==========================================
-   SCROLL ANIMATION
-========================================== */
+/* SCROLL ANIMATION */
 
 .testimonial-sec.testimonial-animate-ready .testimonial-head,
 .testimonial-sec.testimonial-animate-ready .testimonial-slider-wrap,
 .testimonial-sec.testimonial-animate-ready .testimonial-stats {
   opacity: 0;
   transform: translateY(28px);
-  transition:
-    opacity 0.7s ease,
+  transition: opacity 0.7s ease,
     transform 0.7s ease;
 }
 
@@ -2740,12 +2588,9 @@ p, a, button, input, textarea {
   transition-delay: 0.2s;
 }
 
-/* ==========================================
-   TABLET
-========================================== */
+/* TABLET */
 
 @media (max-width: 1050px) {
-
   .testimonial-card {
     flex-basis: calc((100% - 28px) / 2);
   }
@@ -2760,12 +2605,9 @@ p, a, button, input, textarea {
   }
 }
 
-/* ==========================================
-   MOBILE
-========================================== */
+/* MOBILE */
 
 @media (max-width: 700px) {
-
   .testimonial-sec {
     padding: 60px 0;
   }
@@ -2847,29 +2689,25 @@ p, a, button, input, textarea {
   }
 
   .testimonial-sec::before,
-  .testimonial-sec::after {
+    .testimonial-sec::after {
     display: none;
   }
 }
 
-/* ==========================================
-   REDUCED MOTION
-========================================== */
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
-
   .testimonial-track,
-  .testimonial-nav,
-  .testimonial-dot {
+    .testimonial-nav,
+    .testimonial-dot {
     transition: none;
   }
 
   .testimonial-sec.testimonial-animate-ready .testimonial-head,
-  .testimonial-sec.testimonial-animate-ready .testimonial-slider-wrap,
-  .testimonial-sec.testimonial-animate-ready .testimonial-stats {
+    .testimonial-sec.testimonial-animate-ready .testimonial-slider-wrap,
+    .testimonial-sec.testimonial-animate-ready .testimonial-stats {
     opacity: 1;
     transform: none;
     transition: none;
   }
 }
-
