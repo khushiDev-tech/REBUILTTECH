@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             if (!card) return 0;
 
-            const gap = 25;
+            const gap = parseFloat(window.getComputedStyle(slider).columnGap) || 25;
 
             return card.offsetWidth + gap;
 
