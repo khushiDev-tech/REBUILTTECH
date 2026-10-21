@@ -1,0 +1,115 @@
+/* Shared inner-page hero sizing. Home intentionally keeps its own hero. */
+:root {
+  --page-hero-height: 500px;
+  --page-hero-title-size: 56px;
+  --page-hero-description-size: 17px;
+  --page-hero-label-size: 14px;
+  --page-hero-breadcrumb-size: 15px;
+}
+
+/* Higher specificity than page-specific hero rules at every breakpoint. */
+main > :is(.about-reference-hero, .services-hero, .project-hero, .blog-hero, .contact-hero) h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: var(--page-hero-title-size);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+main > :is(.about-reference-hero, .services-hero, .project-hero, .blog-hero, .contact-hero) h1 span {
+  font-size: inherit;
+  line-height: inherit;
+  letter-spacing: inherit;
+}
+
+main > :is(.about-reference-hero, .services-hero, .project-hero, .blog-hero, .contact-hero) :is(.hero-description, .project-hero-description) {
+  font-size: var(--page-hero-description-size);
+  line-height: 1.65;
+}
+
+main > :is(.about-reference-hero, .services-hero, .project-hero, .blog-hero, .contact-hero) :is(.hero-label, .hero-subtitle, .project-hero-label) {
+  font-size: var(--page-hero-label-size);
+  line-height: 1.5;
+}
+
+main > :is(.about-reference-hero, .services-hero, .project-hero, .blog-hero, .contact-hero) :is(.breadcrumb, .breadcrumbs, .project-breadcrumb),
+main > :is(.about-reference-hero, .services-hero, .project-hero, .blog-hero, .contact-hero) :is(.breadcrumb, .breadcrumbs, .project-breadcrumb) :is(a, [aria-current="page"]) {
+  font-size: var(--page-hero-breadcrumb-size);
+  line-height: 1.5;
+}
+
+main > :is(.about-reference-hero, .services-hero, .project-hero, .blog-hero, .contact-hero) {
+  box-sizing: border-box;
+  height: var(--page-hero-height);
+  min-height: var(--page-hero-height);
+  padding-block: 0;
+}
+
+.contact-hero .hero-container {
+  height: auto;
+  min-height: 0;
+}
+
+/* Mask the artwork's baked-in heading and replace it with responsive HTML. */
+.about-reference-hero {
+  display: flex;
+  align-items: center;
+  color: #fff;
+  background: linear-gradient(90deg, #031827 0%, #031827 48%, rgba(3, 24, 39, 0.96) 55%, rgba(3, 24, 39, 0.25) 72%), url("../img/about-hero.png") center / cover no-repeat;
+}
+
+.about-reference-hero .about-hero-container {
+  width: min(100% - 48px, 1200px);
+  margin-inline: auto;
+  padding-block: 40px;
+}
+
+.about-reference-hero .breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.about-reference-hero .breadcrumb a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.about-reference-hero .breadcrumb i {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 10px;
+}
+
+.about-reference-hero .breadcrumb [aria-current="page"],
+.about-reference-hero .hero-title span {
+  color: #ff5a00;
+}
+
+.about-reference-hero .hero-label {
+  margin: 0 0 16px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.about-reference-hero .hero-title {
+  margin: 0 0 22px;
+  max-width: 760px;
+}
+
+.about-reference-hero .hero-title span {
+  display: block;
+}
+
+.about-reference-hero .hero-description {
+  color: #d4dce6;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  :root {
+    --page-hero-height: 540px;
+    --page-hero-title-size: 34px;
+    --page-hero-description-size: 16px;
+  }
+}

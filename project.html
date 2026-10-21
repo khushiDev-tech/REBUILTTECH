@@ -1,0 +1,396 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- =====================================================
+       REBUILT TECHZ - PROJECTS PAGE
+       File: project.html
+  ===================================================== -->
+
+    <!-- SECTION 01: BASIC META TAGS -->
+
+    <meta charset="UTF-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta
+      name="description"
+      content="Explore Rebuilt Techz projects and client portfolio across healthcare, hospitality, education, government, corporate and industrial sectors."
+    />
+
+    <meta name="theme-color" content="#082d63" />
+
+    <title>Our Projects | Rebuilt Techz</title>
+
+    <!-- =====================================================
+       SECTION 02: GOOGLE FONTS
+  ===================================================== -->
+
+    <!-- =====================================================
+       SECTION 03: FONT AWESOME
+  ===================================================== -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+
+    <!-- =====================================================
+       SECTION 04: CSS FILES
+  ===================================================== -->
+
+    <!-- Common Header -->
+    <link rel="stylesheet" href="Css/header.css" />
+
+    <!-- Projects Page -->
+    <link rel="stylesheet" href="Css/project.css" />
+
+    <!-- Common Footer -->
+    <link rel="stylesheet" href="Css/footer.css" />
+    <link rel="stylesheet" href="Css/page-hero.css" />
+    <link rel="stylesheet" href="Css/fonts.css" />
+    <link rel="stylesheet" href="Css/business-cta.css" />
+  </head>
+
+  <body>
+    <!-- =====================================================
+       SECTION 05: COMMON HEADER
+
+       Header content is injected by:
+       js/header.js
+  ===================================================== -->
+
+    <header id="site-header"></header>
+
+    <!-- =====================================================
+       MAIN CONTENT
+  ===================================================== -->
+
+    <main id="main-content">
+      <!-- ===================================================
+         SECTION 06: PROJECT HERO
+    =================================================== -->
+
+      <section class="project-hero" aria-labelledby="project-hero-title">
+        <!-- Hero Overlay -->
+        <div class="project-hero-overlay" aria-hidden="true"></div>
+
+        <div class="project-hero-container">
+          <!-- -----------------------------------------------
+             BREADCRUMB
+        ----------------------------------------------- -->
+
+          <nav class="project-breadcrumb hero-reveal" aria-label="Breadcrumb">
+            <a href="index.html"> Home </a>
+
+            <i class="fa-solid fa-chevron-right" aria-hidden="true"></i>
+
+            <span aria-current="page"> Projects </span>
+          </nav>
+
+          <!-- -----------------------------------------------
+             HERO LABEL
+        ----------------------------------------------- -->
+
+          <div class="project-hero-label hero-reveal">
+            <span class="label-line" aria-hidden="true"></span>
+
+            POWERING PROGRESS TOGETHER
+          </div>
+
+          <!-- -----------------------------------------------
+             HERO HEADING
+        ----------------------------------------------- -->
+
+          <h1 class="project-hero-title hero-reveal" id="project-hero-title">
+            OUR
+
+            <span> PROJECTS </span>
+          </h1>
+
+          <!-- -----------------------------------------------
+             HERO DESCRIPTION
+        ----------------------------------------------- -->
+
+          <p class="project-hero-description hero-reveal">
+            Delivering reliable electrical solutions across government,
+            healthcare, institutional, hospitality and commercial sectors.
+          </p>
+
+          <!-- -----------------------------------------------
+             HERO HIGHLIGHTS
+        ----------------------------------------------- -->
+
+          <div class="project-highlights hero-reveal">
+            <!-- HIGHLIGHT 01 -->
+
+            <div class="project-highlight">
+              <div class="highlight-icon">
+                <i class="fa-solid fa-shield-halved" aria-hidden="true"></i>
+              </div>
+
+              <p>
+                Trusted
+
+                <span> Partnerships </span>
+              </p>
+            </div>
+
+            <!-- Divider -->
+
+            <div class="highlight-divider" aria-hidden="true"></div>
+
+            <!-- HIGHLIGHT 02 -->
+
+            <div class="project-highlight">
+              <div class="highlight-icon">
+                <i class="fa-solid fa-gears" aria-hidden="true"></i>
+              </div>
+
+              <p>
+                Diverse
+
+                <span> Sectors </span>
+              </p>
+            </div>
+
+            <!-- Divider -->
+
+            <div class="highlight-divider" aria-hidden="true"></div>
+
+            <!-- HIGHLIGHT 03 -->
+
+            <div class="project-highlight">
+              <div class="highlight-icon">
+                <i class="fa-solid fa-users" aria-hidden="true"></i>
+              </div>
+
+              <p>
+                Long-term
+
+                <span> Relationships </span>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+         SECTION 07: CLIENT PORTFOLIO
+    =================================================== -->
+
+      <section
+        class="client-portfolio portfolio-section"
+        id="projects"
+        aria-labelledby="portfolio-heading-title"
+      >
+        <div class="portfolio-container">
+          <!-- -----------------------------------------------
+             SECTION HEADING
+        ----------------------------------------------- -->
+
+          <div class="portfolio-heading">
+            <!-- Section Label -->
+
+            <div class="portfolio-label">
+              <span aria-hidden="true"></span>
+
+              OUR CLIENT PORTFOLIO
+
+              <span aria-hidden="true"></span>
+            </div>
+
+            <!-- Section Title -->
+
+            <h2 id="portfolio-heading-title">
+              Trusted by
+
+              <span> Leading Organizations </span>
+            </h2>
+
+            <!-- Section Description -->
+
+            <p>
+              Explore our portfolio across healthcare, hospitality, education,
+              government, infrastructure and corporate sectors.
+            </p>
+          </div>
+
+          <!-- =================================================
+             DYNAMIC PROJECT CARDS
+
+             All 15 project cards are generated by:
+             js/project.js
+
+             Card includes:
+             - Project Image
+             - Category Badge
+             - Circular Company Logo
+             - Project Number
+             - Project Name
+             - Project Category
+             - Two-Line Description
+             - View Project Action
+        ================================================= -->
+
+          <div
+            class="portfolio-grid"
+            id="portfolioGrid"
+            aria-label="Our client projects"
+          ></div>
+        </div>
+      </section>
+
+      <!-- ===================================================
+         SECTION 08: PROJECT CTA
+    =================================================== -->
+
+      <section class="business-cta" aria-labelledby="business-cta-title">
+      <div class="business-cta-overlay" aria-hidden="true"></div>
+      <div class="business-cta-container">
+        <p class="business-cta-kicker"><span aria-hidden="true"></span> LET'S BUILD SOMETHING RELIABLE</p>
+        <h2 id="business-cta-title">Your Next Project.<br><span>Our Electrical Expertise.</span></h2>
+        <p class="business-cta-description">From planning to commissioning, let's find the right electrical solution for your project.</p>
+        <div class="business-cta-buttons">
+          <a class="business-cta-btn business-cta-primary" href="contact.html">Discuss Your Project <i class="fa-solid fa-arrow-right" aria-hidden="true"></i></a>
+          <a class="business-cta-btn business-cta-outline" href="tel:+919358938057"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>+91 9358 938 057</span></a>
+        </div>
+        <ul class="business-cta-features" aria-label="Electrical services">
+          <li><i class="fa-solid fa-bolt" aria-hidden="true"></i> Installation</li>
+          <li><i class="fa-solid fa-clipboard-check" aria-hidden="true"></i> Testing &amp; Commissioning</li>
+          <li><i class="fa-solid fa-screwdriver-wrench" aria-hidden="true"></i> Maintenance</li>
+        </ul>
+      </div>
+    </section>
+
+      <!-- ===================================================
+         SECTION 09: OUR PRESENCE
+    =================================================== -->
+
+      <section
+        class="presence-section"
+        aria-labelledby="presence-heading-title"
+      >
+        <div class="presence-container">
+          <!-- -----------------------------------------------
+             SECTION HEADING
+        ----------------------------------------------- -->
+
+          <div class="presence-heading">
+            <!-- Section Label -->
+
+            <div class="presence-label">
+              <span aria-hidden="true"></span>
+
+              OUR PRESENCE
+
+              <span aria-hidden="true"></span>
+            </div>
+
+            <!-- Section Title -->
+
+            <h2 id="presence-heading-title">
+              Delivering Impact
+
+              <span> Across Sectors </span>
+            </h2>
+          </div>
+
+          <!-- -----------------------------------------------
+             PRESENCE GRID
+        ----------------------------------------------- -->
+
+          <div class="presence-grid">
+            <!-- PRESENCE 01: GOVERNMENT -->
+
+            <div class="presence-item">
+              <div class="presence-icon">
+                <i class="fa-solid fa-landmark" aria-hidden="true"></i>
+              </div>
+
+              <h3>
+                Government
+
+                <span> &amp; Public Sector </span>
+              </h3>
+            </div>
+
+            <!-- PRESENCE 02: HEALTHCARE -->
+
+            <div class="presence-item">
+              <div class="presence-icon">
+                <i class="fa-solid fa-hospital" aria-hidden="true"></i>
+              </div>
+
+              <h3>Healthcare</h3>
+            </div>
+
+            <!-- PRESENCE 03: EDUCATION -->
+
+            <div class="presence-item">
+              <div class="presence-icon">
+                <i class="fa-solid fa-graduation-cap" aria-hidden="true"></i>
+              </div>
+
+              <h3>
+                Institutions
+
+                <span> &amp; Education </span>
+              </h3>
+            </div>
+
+            <!-- PRESENCE 04: HOSPITALITY -->
+
+            <div class="presence-item">
+              <div class="presence-icon">
+                <i class="fa-solid fa-hotel" aria-hidden="true"></i>
+              </div>
+
+              <h3>Hospitality</h3>
+            </div>
+
+            <!-- PRESENCE 05: CORPORATE -->
+
+            <div class="presence-item">
+              <div class="presence-icon">
+                <i class="fa-solid fa-building" aria-hidden="true"></i>
+              </div>
+
+              <h3>
+                Commercial
+
+                <span> &amp; Corporate </span>
+              </h3>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- =====================================================
+       SECTION 10: COMMON FOOTER
+
+       Footer content is injected by:
+       js/footer.js
+  ===================================================== -->
+
+    <footer id="site-footer"></footer>
+
+    <!-- =====================================================
+       SECTION 11: JAVASCRIPT FILES
+  ===================================================== -->
+
+    <!-- Common Header JavaScript -->
+
+    <script src="Js/header.js" defer></script>
+
+    <!-- Common Footer JavaScript -->
+
+    <script src="Js/footer.js" defer></script>
+
+    <!-- Projects Page JavaScript -->
+
+    <script src="Js/project.js" defer></script>
+  </body>
+</html>

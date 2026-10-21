@@ -1,0 +1,14 @@
+/* Site-wide font family only; preserve existing sizes, spacing and icon fonts. */
+:root {
+  --font-primary: "Poppins", sans-serif;
+  --font-body: var(--font-primary);
+  --font-heading: var(--font-primary);
+}
+
+body,
+h1, h2, h3, h4, h5, h6,
+p, a, li, dt, dd, blockquote, figcaption,
+label, button, input, select, textarea, option, optgroup,
+table, caption, th, td, small, summary {
+  font-family: var(--font-primary);
+}

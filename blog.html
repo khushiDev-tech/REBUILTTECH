@@ -1,0 +1,382 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Blogs | Rebuilt Techz</title>
+
+  <meta
+    name="description"
+    content="Explore electrical engineering insights, industry trends, safety practices and infrastructure solutions from Rebuilt Techz."
+  />
+
+  <!-- Google Fonts -->
+
+  <!-- Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&amp;display=swap" />
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  />
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="Css/header.css" />
+  <link rel="stylesheet" href="Css/blog.css" />
+  <link rel="stylesheet" href="Css/footer.css" />
+    <link rel="stylesheet" href="Css/page-hero.css" />
+    <link rel="stylesheet" href="Css/fonts.css" />
+  </head>
+
+<body>
+
+  <!-- ==============================================
+       TOP BAR
+  ============================================== -->
+
+<section id="site-header"></section>
+
+  <!-- ==============================================
+       MAIN CONTENT
+  ============================================== -->
+
+  <main id="main-content">
+
+
+    <!-- ============================================
+         01. BLOG HERO
+    ============================================ -->
+
+    <section
+      class="blog-hero"
+      aria-labelledby="blogHeroTitle"
+    >
+
+      <div class="hero-container">
+
+        <div class="hero-content">
+
+          <!-- Breadcrumb -->
+          <nav
+            class="breadcrumbs"
+            aria-label="Breadcrumb"
+          >
+
+            <a href="index.html">
+              Home
+            </a>
+
+            <i class="fa-solid fa-chevron-right breadcrumb-arrow" aria-hidden="true"></i>
+
+            <span aria-current="page">
+              Blogs
+            </span>
+
+          </nav>
+
+          <div class="hero-line"></div>
+
+          <p class="hero-label">
+            OUR BLOGS
+          </p>
+
+          <h1
+            class="hero-title"
+            id="blogHeroTitle"
+          >
+
+            Insights That
+
+            <span>
+              Power Progress
+            </span>
+
+          </h1>
+
+          <p class="hero-description">
+
+            Explore expert insights, industry trends,
+            electrical engineering innovations and
+            practical knowledge from Rebuilt Techz.
+
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================================
+         02. LATEST BLOGS
+    ============================================ -->
+
+    <section
+      class="latest-blogs-section"
+      id="latestBlogs"
+      aria-labelledby="latestBlogsTitle"
+    >
+
+      <div class="latest-blogs-container">
+
+        <!-- Heading -->
+        <div class="latest-blogs-header">
+
+          <p class="latest-blogs-label">
+            OUR LATEST BLOGS
+          </p>
+
+          <h2 id="latestBlogsTitle">
+            Explore Our Latest Insights
+          </h2>
+
+          <p>
+
+            Stay informed with electrical engineering
+            insights, industry updates and practical
+            guides for modern infrastructure.
+
+          </p>
+
+        </div>
+
+
+        <!-- ====================================
+             DYNAMIC BLOG CARDS CONTAINER
+
+             All blog cards will be generated
+             automatically from the JS array.
+        ==================================== -->
+
+        <div
+          class="latest-blogs-grid"
+          id="latestBlogsGrid"
+        ></div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================================
+         03. BLOG NEWSLETTER
+    ============================================ -->
+
+    <section
+      class="blog-newsletter-section"
+      aria-labelledby="blogNewsletterTitle"
+    >
+
+      <div class="blog-newsletter-container">
+
+        <!-- Left Side -->
+        <div class="blog-newsletter-content">
+
+          <div class="blog-newsletter-label">
+
+            <span class="blog-newsletter-line"></span>
+
+            <span>
+              STAY CONNECTED
+            </span>
+
+          </div>
+
+          <h2 id="blogNewsletterTitle">
+
+            Get the Latest
+
+            <span>
+              Updates &amp; Insights
+            </span>
+
+          </h2>
+
+          <p>
+
+            Subscribe to receive updates on electrical
+            engineering, industry innovations and
+            practical infrastructure solutions.
+
+          </p>
+
+        </div>
+
+
+        <!-- Right Side -->
+        <div class="blog-newsletter-form-wrapper">
+
+          <form
+            class="blog-newsletter-form"
+            id="blogNewsletterForm"
+          >
+
+            <div class="blog-newsletter-input-group">
+
+              <i
+                class="fa-regular fa-envelope"
+                aria-hidden="true"
+              ></i>
+
+              <input
+                type="email"
+                id="blogNewsletterEmail"
+                name="email"
+                placeholder="Enter your email address"
+                aria-label="Email address"
+                autocomplete="email"
+                required
+              />
+
+            </div>
+
+            <button type="submit">
+
+              Subscribe
+
+              <i
+                class="fa-solid fa-arrow-right"
+                aria-hidden="true"
+              ></i>
+
+            </button>
+
+          </form>
+
+          <p
+            class="blog-newsletter-message"
+            id="blogNewsletterMessage"
+            role="status"
+            aria-live="polite"
+          ></p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- ============================================
+         04. BLOG FEATURES
+    ============================================ -->
+
+    <section
+      class="blog-features-section"
+      aria-label="Why read our blogs"
+    >
+
+      <div class="blog-features-container">
+
+        <!-- Feature 1 -->
+        <div class="blog-feature-item">
+
+          <div class="blog-feature-icon">
+            <i class="fa-solid fa-lightbulb"></i>
+          </div>
+
+          <div class="blog-feature-content">
+
+            <h3>Expert Insights</h3>
+
+            <p>
+              Knowledge from electrical engineering
+              professionals.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Feature 2 -->
+        <div class="blog-feature-item">
+
+          <div class="blog-feature-icon">
+            <i class="fa-solid fa-bolt"></i>
+          </div>
+
+          <div class="blog-feature-content">
+
+            <h3>Industry Updates</h3>
+
+            <p>
+              Explore trends and developments
+              in electrical infrastructure.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Feature 3 -->
+        <div class="blog-feature-item">
+
+          <div class="blog-feature-icon">
+            <i class="fa-solid fa-book-open"></i>
+          </div>
+
+          <div class="blog-feature-content">
+
+            <h3>Useful Guides</h3>
+
+            <p>
+              Practical information and
+              easy-to-follow engineering guides.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- Feature 4 -->
+        <div class="blog-feature-item">
+
+          <div class="blog-feature-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+          </div>
+
+          <div class="blog-feature-content">
+
+            <h3>Trusted Information</h3>
+
+            <p>
+              Clear, relevant and reliable
+              technical information.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- ==============================================
+       FOOTER
+  ============================================== -->
+
+<footer id="site-footer"></footer>
+
+  <!-- ==============================================
+       JAVASCRIPT
+  ============================================== -->
+
+  <script src="Js/header.js" defer></script>
+  <script src="Js/footer.js" defer></script>
+  <script src="Js/blog.js" defer></script>
+
+</body>
+
+</html>

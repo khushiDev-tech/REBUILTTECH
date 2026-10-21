@@ -1,0 +1,1566 @@
+/* =========================================================
+   REBUILT TECHZ | PROJECTS PAGE
+   File: css/project.css
+   Matches: projects.html + js/project.js
+   Header and footer remain in css/header.css and css/footer.css
+========================================================= */
+
+/* 01. THEME & PAGE BASE ---------------------------------- */
+:root {
+  --navy: #082d63;
+  --navy-dark: #061f47;
+  --orange: #f15a24;
+  --white: #fff;
+  --text: #263246;
+  --muted: #68758a;
+  --line: #e5ebf2;
+  --light: #f5f8fc;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: var(--text);
+  background: var(--white);
+  overflow-x: hidden;
+}
+img {
+  max-width: 100%;
+}
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+/* 02. PROJECT HERO --------------------------------------- */
+.project-hero {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 470px;
+  overflow: hidden;
+  background: var(--navy-dark) url("../img/bg-pj.png") center / cover no-repeat;
+}
+.project-hero-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    90deg,
+    rgba(2, 31, 60, 0.98) 0%,
+    rgba(2, 31, 60, 0.92) 34%,
+    rgba(2, 31, 60, 0.65) 60%,
+    rgba(2, 31, 60, 0.14) 100%
+  );
+}
+.project-hero::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 95px;
+  z-index: -1;
+  background: linear-gradient(0deg, rgba(2, 25, 49, 0.28), transparent);
+  pointer-events: none;
+}
+.project-hero-container {
+  width: min(100% - 48px, 1200px);
+  margin-inline: auto;
+  padding: 58px 0;
+}
+.project-breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 34px;
+  font-size: 12px;
+  font-weight: 500;
+}
+.project-breadcrumb a {
+  color: var(--white);
+  text-decoration: none;
+  transition: color 0.25s ease;
+}
+.project-breadcrumb a:hover {
+  color: var(--orange);
+}
+.project-breadcrumb i {
+  color: rgba(255, 255, 255, 0.65);
+  font-size: 9px;
+}
+.project-breadcrumb span {
+  color: var(--orange);
+  font-weight: 600;
+}
+.project-hero-label {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+  color: var(--orange);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+}
+.label-line {
+  width: 32px;
+  height: 3px;
+  flex: 0 0 32px;
+  background: var(--orange);
+  border-radius: 5px;
+}
+.project-hero-title {
+  margin: 0 0 17px;
+  color: var(--white);
+  font-size: clamp(42px, 5vw, 68px);
+  line-height: 1.08;
+  font-weight: 800;
+  letter-spacing: -1.4px;
+}
+.project-hero-title span {
+  color: var(--orange);
+}
+.project-hero-description {
+  max-width: 600px;
+  margin: 0 0 34px;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 14px;
+  line-height: 1.8;
+}
+.project-highlights {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.project-highlight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+.highlight-icon {
+  display: grid;
+  place-items: center;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 46px;
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+  color: var(--orange);
+  font-size: 17px;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    transform 0.3s;
+}
+.project-highlight p {
+  margin: 0;
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.project-highlight p span {
+  display: block;
+}
+.highlight-divider {
+  width: 1px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.32);
+}
+.project-highlight:hover .highlight-icon {
+  background: var(--orange);
+  color: var(--white);
+  transform: translateY(-3px);
+}
+.hero-reveal {
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease;
+}
+.hero-reveal.active {
+  opacity: 1;
+  transform: none;
+}
+
+/* 03. CLIENT PORTFOLIO SECTION --------------------------- */
+.client-portfolio {
+  padding: 84px 20px 96px;
+  background: linear-gradient(135deg, #fff 0%, #f8fbff 55%, #f2f7fc 100%);
+}
+.portfolio-container {
+  width: 100%;
+  max-width: 1250px;
+  margin-inline: auto;
+}
+.portfolio-heading {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+}
+.portfolio-label,
+.presence-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 11px;
+  margin-bottom: 10px;
+  color: var(--navy);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+.portfolio-label span,
+.presence-label span {
+  display: inline-block;
+  width: 34px;
+  height: 2px;
+  background: var(--orange);
+  border-radius: 10px;
+}
+.portfolio-heading h2,
+.presence-heading h2 {
+  margin: 0 0 12px;
+  color: var(--navy);
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 800;
+  line-height: 1.25;
+}
+.portfolio-heading h2 span,
+.presence-heading h2 span {
+  color: var(--orange);
+}
+.portfolio-heading > p {
+  max-width: 670px;
+  margin: 0 auto;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+/* 04. PROJECT CARD GRID ---------------------------------- */
+#portfolioGrid.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  align-items: stretch;
+  gap: 28px;
+}
+.portfolio-card {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  height: 100%;
+  overflow: hidden;
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+  box-shadow: 0 8px 26px rgba(8, 45, 99, 0.07);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+.portfolio-card:hover {
+  transform: translateY(-7px);
+  border-color: rgba(241, 90, 36, 0.25);
+  box-shadow: 0 18px 42px rgba(8, 45, 99, 0.14);
+}
+
+/* 05. PROJECT IMAGE & CATEGORY BADGE --------------------- */
+.portfolio-image {
+  position: relative;
+  height: 225px;
+  flex: 0 0 225px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #16457f, var(--navy-dark));
+}
+.portfolio-image > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.portfolio-card:hover .portfolio-image > img {
+  transform: scale(1.055);
+}
+.portfolio-image::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(6, 31, 71, 0.28), transparent 65%);
+  pointer-events: none;
+}
+/* Slanted bottom edge matches the chosen minimal card design. */
+/* .portfolio-image::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  bottom: -1px;
+  left: 0;
+  width: 100%;
+  height: 28px;
+  background: var(--white);
+  clip-path: polygon(0 100%, 100% 12%, 100% 100%);
+  pointer-events: none;
+} */
+.portfolio-image-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #16457f, var(--navy-dark));
+}
+.portfolio-image-fallback i {
+  color: rgba(255, 255, 255, 0.78);
+  font-size: 62px;
+}
+.portfolio-category {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 3;
+  max-width: calc(100% - 32px);
+  padding: 8px 13px;
+  border-radius: 5px;
+  background: rgba(6, 31, 71, 0.92);
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1.4;
+  transition: background 0.3s;
+}
+.portfolio-card:hover .portfolio-category {
+  background: var(--orange);
+}
+
+/* 06. OVERLAPPING CIRCULAR COMPANY LOGO ------------------ */
+.portfolio-logo {
+  position: relative;
+  z-index: 4;
+  display: grid;
+  place-items: center;
+  width: 78px;
+  height: 78px;
+  flex: 0 0 78px;
+  margin: -48px 0 0 24px;
+  padding: 10px;
+  background: var(--white);
+  border: 4px solid var(--white);
+  border-radius: 50%;
+  box-shadow: 0 5px 18px rgba(8, 45, 99, 0.17);
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s;
+}
+.portfolio-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.portfolio-logo-fallback {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: #edf3fa;
+}
+.portfolio-logo-fallback i {
+  color: var(--navy);
+  font-size: 25px;
+}
+.portfolio-card:hover .portfolio-logo {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 22px rgba(8, 45, 99, 0.22);
+}
+
+/* 07. CARD TEXT, NUMBER & DESCRIPTION -------------------- */
+.portfolio-content {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  padding: 18px 24px 23px;
+  text-align: left;
+}
+/* .portfolio-number {
+  position: absolute;
+  top: -51px;
+  right: 21px;
+  color: #e9eef5;
+  font-size: 54px;
+  font-weight: 800;
+  letter-spacing: -3px;
+  line-height: 1;
+  user-select: none;
+  pointer-events: none;
+} */
+.portfolio-title {
+  position: relative;
+  z-index: 1;
+  margin: 0 0 6px;
+  color: var(--navy);
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.45;
+  overflow-wrap: anywhere;
+}
+.portfolio-subtitle {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.6;
+}
+.portfolio-subtitle::after {
+  content: "";
+  display: block;
+  width: 34px;
+  height: 3px;
+  margin: 15px 0 16px;
+  border-radius: 10px;
+  background: var(--orange);
+  transition: width 0.3s ease;
+}
+.portfolio-card:hover .portfolio-subtitle::after {
+  width: 54px;
+}
+.portfolio-description {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  margin: 0 0 23px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.85;
+}
+
+/* 08. VIEW PROJECT FOOTER -------------------------------- */
+.portfolio-footer {
+  width: 100%;
+  margin-top: auto;
+  padding-top: 15px;
+  border-top: 1px solid var(--line);
+}
+.portfolio-project-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  width: 100%;
+  color: var(--orange);
+  text-decoration: none;
+}
+.portfolio-view-text {
+  font-size: 13px;
+  font-weight: 600;
+}
+.portfolio-arrow {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+  border: 1px solid rgba(241, 90, 36, 0.13);
+  border-radius: 50%;
+  background: #fff1eb;
+  color: var(--orange);
+  transition:
+    transform 0.3s,
+    background 0.3s,
+    color 0.3s;
+}
+.portfolio-arrow i {
+  font-size: 13px;
+}
+.portfolio-card:hover .portfolio-arrow {
+  transform: translateX(3px);
+  background: var(--orange);
+  color: var(--white);
+}
+a.portfolio-project-link:hover {
+  color: var(--navy);
+}
+a.portfolio-project-link:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+/* 09. CARD SCROLL REVEAL --------------------------------- */
+.portfolio-card.portfolio-reveal {
+  opacity: 0;
+  transform: translateY(32px);
+  transition:
+    opacity 0.65s ease,
+    transform 0.65s ease,
+    box-shadow 0.35s ease,
+    border-color 0.35s ease;
+}
+.portfolio-card.portfolio-reveal.portfolio-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.portfolio-card.portfolio-reveal.portfolio-visible:hover {
+  transform: translateY(-7px);
+}
+
+/* 10. PROJECT CTA ---------------------------------------- */
+.project-cta {
+  position: relative;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  min-height: 280px;
+  overflow: hidden;
+  background: var(--navy-dark) url("../img/bg-service.png") center right /
+    cover no-repeat;
+}
+.project-cta-overlay {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(3, 29, 56, 0.98) 0%,
+    rgba(3, 31, 60, 0.94) 38%,
+    rgba(3, 31, 60, 0.65) 65%,
+    rgba(3, 31, 60, 0.18) 100%
+  );
+}
+.project-cta-container {
+  width: min(100% - 48px, 1200px);
+  margin-inline: auto;
+  padding: 50px 0;
+}
+.project-cta-content {
+  max-width: 650px;
+}
+.project-cta-content h2 {
+  margin: 0 0 12px;
+  color: var(--white);
+  font-size: clamp(26px, 3vw, 36px);
+  font-weight: 800;
+  line-height: 1.25;
+}
+.project-cta-content h2 span {
+  color: var(--orange);
+}
+.project-cta-content p {
+  max-width: 540px;
+  margin: 0 0 24px;
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13px;
+  line-height: 1.8;
+}
+.project-cta-buttons {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+.cta-quote-btn,
+.cta-phone-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 45px;
+  padding: 0 20px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  text-decoration: none;
+  transition:
+    transform 0.3s,
+    background 0.3s,
+    border-color 0.3s,
+    color 0.3s;
+}
+.cta-quote-btn {
+  background: var(--orange);
+  border: 1px solid var(--orange);
+  color: var(--white);
+}
+.cta-quote-btn:hover {
+  background: #d84b1b;
+  border-color: #d84b1b;
+  transform: translateY(-2px);
+}
+.cta-quote-btn i {
+  transition: transform 0.3s;
+}
+.cta-quote-btn:hover i {
+  transform: translateX(4px);
+}
+.cta-phone-btn {
+  border: 1px solid rgba(255, 255, 255, 0.72);
+  background: rgba(255, 255, 255, 0.04);
+  color: var(--white);
+}
+.cta-phone-btn:hover {
+  background: var(--white);
+  border-color: var(--white);
+  color: var(--navy);
+  transform: translateY(-2px);
+}
+.cta-phone-btn:hover i {
+  color: var(--orange);
+}
+
+/* 11. OUR PRESENCE --------------------------------------- */
+.presence-section {
+  position: relative;
+  overflow: hidden;
+  padding: 70px 20px 76px;
+  background: radial-gradient(
+    circle at center,
+    rgba(210, 230, 247, 0.55),
+    rgba(247, 251, 255, 0.96) 68%
+  );
+}
+.presence-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  opacity: 0.2;
+  background-image: radial-gradient(#8eb4d3 1px, transparent 1px);
+  background-size: 9px 9px;
+  pointer-events: none;
+}
+.presence-container {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 1100px);
+  margin-inline: auto;
+}
+.presence-heading {
+  margin-bottom: 43px;
+  text-align: center;
+}
+.presence-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  align-items: start;
+}
+.presence-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+  min-height: 115px;
+  padding: 0 18px;
+  text-align: center;
+}
+.presence-item:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 16px;
+  right: 0;
+  width: 1px;
+  height: 75px;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(9, 45, 92, 0.28),
+    transparent
+  );
+}
+.presence-icon {
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  margin-bottom: 14px;
+  background: var(--white);
+  border: 1px solid #e2ebf3;
+  border-radius: 50%;
+  box-shadow: 0 6px 18px rgba(9, 45, 92, 0.08);
+  color: var(--navy);
+  font-size: 21px;
+  transition:
+    transform 0.3s,
+    color 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+}
+.presence-item h3 {
+  margin: 0;
+  color: var(--navy);
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+.presence-item h3 span {
+  display: block;
+}
+.presence-item:hover .presence-icon {
+  transform: translateY(-4px);
+  color: var(--orange);
+  border-color: rgba(241, 90, 36, 0.4);
+  box-shadow: 0 10px 25px rgba(9, 45, 92, 0.12);
+}
+
+/* 12. RESPONSIVE | LAPTOP ------------------------------- */
+@media (max-width: 1100px) {
+  #portfolioGrid.portfolio-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .portfolio-image {
+    height: 200px;
+    flex-basis: 200px;
+  }
+  .portfolio-content {
+    padding-inline: 19px;
+  }
+  .portfolio-title {
+    font-size: 17px;
+  }
+}
+
+/* 13. RESPONSIVE | TABLET ------------------------------- */
+@media (max-width: 900px) {
+  .project-hero {
+    min-height: 450px;
+  }
+  .project-hero-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(2, 31, 60, 0.97),
+      rgba(2, 31, 60, 0.72)
+    );
+  }
+  #portfolioGrid.portfolio-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+  .portfolio-image {
+    height: 220px;
+    flex-basis: 220px;
+  }
+  .portfolio-content {
+    padding-inline: 22px;
+  }
+  .presence-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    row-gap: 36px;
+  }
+  .presence-item::after {
+    display: none;
+  }
+  .project-cta-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(3, 29, 56, 0.98),
+      rgba(3, 29, 56, 0.7)
+    );
+  }
+}
+
+/* 14. RESPONSIVE | SMALL TABLET ------------------------- */
+@media (max-width: 650px) {
+  .project-hero {
+    min-height: 500px;
+    background-position: 65% center;
+  }
+  .project-hero-overlay {
+    background: rgba(2, 31, 60, 0.87);
+  }
+  .project-hero-container,
+  .project-cta-container {
+    width: min(100% - 36px, 540px);
+  }
+  .project-breadcrumb {
+    margin-bottom: 28px;
+  }
+  .project-hero-label {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  .project-hero-title {
+    font-size: clamp(36px, 9vw, 48px);
+  }
+  .project-hero-description {
+    font-size: 13px;
+  }
+  .project-highlights {
+    gap: 12px;
+  }
+  .project-highlight {
+    gap: 8px;
+  }
+  .highlight-icon {
+    width: 38px;
+    height: 38px;
+    flex-basis: 38px;
+    font-size: 14px;
+  }
+  .project-highlight p {
+    font-size: 10px;
+  }
+  .highlight-divider {
+    height: 32px;
+  }
+  .client-portfolio {
+    padding: 65px 16px 75px;
+  }
+  .portfolio-heading {
+    margin-bottom: 35px;
+  }
+  .portfolio-heading h2,
+  .presence-heading h2 {
+    font-size: 29px;
+  }
+  #portfolioGrid.portfolio-grid {
+    gap: 17px;
+  }
+  .portfolio-image {
+    height: 175px;
+    flex-basis: 175px;
+  }
+  .portfolio-logo {
+    width: 68px;
+    height: 68px;
+    flex-basis: 68px;
+    margin-top: -43px;
+    margin-left: 17px;
+    padding: 7px;
+  }
+  .portfolio-content {
+    padding: 16px 16px 20px;
+  }
+  .portfolio-number {
+    top: -43px;
+    right: 14px;
+    font-size: 45px;
+  }
+  .portfolio-title {
+    font-size: 16px;
+  }
+  .portfolio-description {
+    font-size: 12px;
+  }
+  .project-cta {
+    min-height: 320px;
+  }
+  .project-cta-overlay {
+    background: rgba(3, 29, 56, 0.88);
+  }
+  .project-cta-content h2 {
+    font-size: 28px;
+  }
+  .presence-section {
+    padding: 58px 16px 64px;
+  }
+  .presence-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 34px 14px;
+  }
+}
+
+/* 15. RESPONSIVE | MOBILE ------------------------------- */
+@media (max-width: 520px) {
+  .project-hero {
+    min-height: 535px;
+  }
+  .project-hero-container {
+    padding-block: 45px;
+  }
+  .project-highlights {
+    justify-content: space-between;
+    gap: 8px;
+  }
+  .project-highlight {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+  }
+  .highlight-divider {
+    height: 72px;
+  }
+  #portfolioGrid.portfolio-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .portfolio-card {
+    width: 100%;
+    max-width: 430px;
+    margin-inline: auto;
+  }
+  .portfolio-image {
+    height: 225px;
+    flex-basis: 225px;
+  }
+  .portfolio-logo {
+    width: 76px;
+    height: 76px;
+    flex-basis: 76px;
+    margin-top: -47px;
+    margin-left: 22px;
+    padding: 9px;
+  }
+  .portfolio-content {
+    padding: 17px 22px 23px;
+  }
+  .portfolio-number {
+    top: -49px;
+    right: 20px;
+    font-size: 51px;
+  }
+  .portfolio-title {
+    font-size: 19px;
+  }
+  .portfolio-description {
+    font-size: 13px;
+  }
+  .project-cta-buttons {
+    align-items: stretch;
+  }
+  .cta-quote-btn,
+  .cta-phone-btn {
+    min-height: 46px;
+  }
+}
+
+/* 16. RESPONSIVE | VERY SMALL PHONES -------------------- */
+@media (max-width: 380px) {
+  .project-hero-title {
+    font-size: 34px;
+  }
+  .project-hero-description {
+    font-size: 12px;
+  }
+  .project-highlight p {
+    font-size: 9px;
+  }
+  .portfolio-image {
+    height: 195px;
+    flex-basis: 195px;
+  }
+  .portfolio-content {
+    padding-inline: 18px;
+  }
+  .portfolio-title {
+    font-size: 17px;
+  }
+  .portfolio-category {
+    top: 12px;
+    left: 12px;
+    font-size: 10px;
+  }
+  .portfolio-heading h2,
+  .presence-heading h2 {
+    font-size: 25px;
+  }
+  .project-cta-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cta-quote-btn,
+  .cta-phone-btn {
+    width: 100%;
+  }
+}
+
+/* 17. ACCESSIBILITY -------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .hero-reveal,
+  .portfolio-card.portfolio-reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .hero-reveal,
+  .portfolio-card,
+  .portfolio-card.portfolio-reveal,
+  .portfolio-image img,
+  .portfolio-logo,
+  .portfolio-arrow,
+  .presence-icon,
+  .highlight-icon {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+
+
+
+
+/* =========================================================
+   REBUILT TECHZ - 3D PROJECT CARD FLIP
+   Original Front Design + Services Back Side
+========================================================= */
+
+
+/* =========================================================
+   01. MAIN CARD - 3D CONTAINER
+========================================================= */
+
+.portfolio-card {
+  position: relative;
+  display: block;
+  height: 100%;
+  min-width: 0;
+  overflow: visible;
+
+  perspective: 1200px;
+
+  background: transparent;
+  border: none;
+  border-radius: 15px;
+  box-shadow: none;
+}
+
+/* Preserve scroll reveal and remove old hover lift */
+
+.portfolio-card:hover,
+.portfolio-card.portfolio-reveal.portfolio-visible:hover {
+  transform: translateY(0);
+  border-color: transparent;
+  box-shadow: none;
+}
+
+
+/* =========================================================
+   02. FLIP INNER WRAPPER
+========================================================= */
+
+.portfolio-flip-inner {
+  position: relative;
+  display: grid;
+
+  width: 100%;
+  height: 100%;
+
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+
+  transition: transform 0.75s ease;
+}
+
+
+/* =========================================================
+   03. FRONT AND BACK - COMMON STYLES
+========================================================= */
+
+.portfolio-front,
+.portfolio-back {
+  grid-area: 1 / 1;
+  min-width: 0;
+
+  border-radius: 15px;
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+
+/* =========================================================
+   04. FRONT SIDE - ORIGINAL CARD DESIGN
+========================================================= */
+
+.portfolio-front {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: hidden;
+
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: 15px;
+
+  box-shadow: 0 8px 26px rgba(8, 45, 99, 0.07);
+}
+
+
+/* PROJECT IMAGE */
+
+.portfolio-front .portfolio-image {
+  position: relative;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.portfolio-front .portfolio-image > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* Remove diagonal image cut */
+
+.portfolio-front .portfolio-image::after {
+  content: none !important;
+  display: none !important;
+}
+
+
+/* FLOATING COMPANY LOGO */
+
+.portfolio-front .portfolio-logo {
+  position: relative;
+  z-index: 4;
+}
+
+
+/* PROJECT CONTENT */
+
+.portfolio-front .portfolio-content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+}
+
+
+/* CARD FOOTER */
+
+.portfolio-front .portfolio-footer {
+  margin-top: auto;
+}
+
+
+/* =========================================================
+   05. VIEW PROJECT BUTTON - ORIGINAL APPEARANCE
+========================================================= */
+
+.portfolio-front button.portfolio-project-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 12px;
+  width: 100%;
+
+  padding: 0;
+  margin: 0;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  color: var(--orange);
+  font-family: inherit;
+  font-size: inherit;
+  text-align: left;
+  text-decoration: none;
+
+  appearance: none;
+  -webkit-appearance: none;
+
+  cursor: pointer;
+}
+
+.portfolio-front button.portfolio-project-link:hover {
+  background: transparent;
+  border: none;
+  color: var(--orange);
+}
+
+.portfolio-front button.portfolio-project-link:focus-visible {
+  outline: 2px solid var(--orange);
+  outline-offset: 5px;
+  border-radius: 4px;
+}
+
+
+/* CIRCULAR ARROW */
+
+.portfolio-front .portfolio-arrow {
+  display: grid;
+  place-items: center;
+
+  width: 38px;
+  height: 38px;
+  flex: 0 0 38px;
+
+  border: 1px solid rgba(241, 90, 36, 0.13);
+  border-radius: 50%;
+
+  background: #fff1eb;
+  color: var(--orange);
+}
+
+
+/* =========================================================
+   06. BACK SIDE - SERVICES PROVIDED
+========================================================= */
+
+.portfolio-back {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+
+  padding: 25px;
+  overflow: hidden;
+
+  background: linear-gradient(
+    145deg,
+    #082d63 0%,
+    #061f47 100%
+  );
+
+  color: #ffffff;
+  text-align: center;
+
+  transform: rotateY(180deg);
+}
+
+
+/* BACK CONTENT - CENTER ALIGNMENT */
+
+.portfolio-back-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  width: 100%;
+  max-height: 100%;
+
+  overflow-y: auto;
+  scrollbar-width: thin;
+
+  text-align: center;
+}
+
+
+/* =========================================================
+   07. BACK SIDE - SMALL CIRCULAR COMPANY LOGO
+========================================================= */
+
+.portfolio-back .portfolio-back-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 65px;
+  height: 65px;
+  min-width: 65px;
+  min-height: 65px;
+  flex-shrink: 0;
+
+  margin: 0 auto 14px;
+  padding: 8px;
+
+  background: #ffffff;
+
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+
+  overflow: hidden;
+
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+/* LOGO IMAGE */
+
+.portfolio-back .portfolio-back-icon img {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  max-width: 100%;
+  max-height: 100%;
+
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* LOGO FALLBACK */
+
+.portfolio-back .portfolio-back-icon .portfolio-logo-fallback {
+  display: grid;
+  place-items: center;
+
+  width: 100%;
+  height: 100%;
+
+  border-radius: 50%;
+}
+
+.portfolio-back .portfolio-back-icon .portfolio-logo-fallback i {
+  color: var(--navy);
+  font-size: 22px;
+}
+
+
+/* =========================================================
+   08. BACK SIDE - HEADING AND TITLE
+========================================================= */
+
+.portfolio-back-label {
+  display: block;
+
+  color: #ffb095;
+
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+
+  text-align: center;
+}
+
+.portfolio-back-title {
+  width: 100%;
+
+  margin: 12px 0;
+
+  color: #ffffff;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.4;
+
+  text-align: center;
+}
+
+
+/* ORANGE DIVIDER */
+
+.portfolio-back-line {
+  display: block;
+
+  width: 45px;
+  height: 3px;
+
+  margin: 15px auto;
+
+  background: var(--orange);
+  border-radius: 5px;
+}
+
+
+/* =========================================================
+   09. BACK SIDE - SERVICES LIST
+========================================================= */
+
+
+/* Center the complete services list */
+.portfolio-back-services {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  width: max-content;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  list-style: none;
+}
+
+/* Align icons and text consistently */
+.portfolio-back-service {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 12px;
+  text-align: left;
+}
+
+.portfolio-back-service i {
+  flex: 0 0 15px;
+  margin: 0;
+  color: #f15a24;
+  text-align: center;
+}
+
+.portfolio-back-service span {
+  text-align: left;
+}
+
+
+
+/* =========================================================
+   10. BACK TO PROJECT BUTTON
+========================================================= */
+
+.portfolio-back-button {
+  align-self: center;
+
+  margin-top: 14px;
+  padding: 9px 16px;
+
+  background: transparent;
+
+  border: 1px solid #ffb095;
+  border-radius: 6px;
+
+  color: #ffffff;
+
+  font-family: inherit;
+  font-size: 12px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    background 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.portfolio-back-button:hover {
+  background: var(--orange);
+  border-color: var(--orange);
+}
+
+.portfolio-back-button:focus-visible {
+  outline: 2px solid #ffffff;
+  outline-offset: 4px;
+}
+
+
+/* =========================================================
+   11. COMPLETE 3D FLIP ANIMATION
+========================================================= */
+
+/* Desktop - hover to flip */
+
+@media (hover: hover) and (pointer: fine) {
+  .portfolio-card:hover .portfolio-flip-inner {
+    transform: rotateY(180deg);
+  }
+}
+
+/* Mobile / button click */
+
+.portfolio-card.is-flipped .portfolio-flip-inner {
+  transform: rotateY(180deg);
+}
+
+
+/* =========================================================
+   12. RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 650px) {
+  .portfolio-back {
+    padding: 20px;
+  }
+
+  .portfolio-back-title {
+    font-size: 18px;
+  }
+
+  .portfolio-back-service {
+    gap: 8px;
+    margin-bottom: 9px;
+    font-size: 12px;
+  }
+
+  .portfolio-back .portfolio-back-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    min-height: 60px;
+    padding: 7px;
+  }
+}
+
+
+/* =========================================================
+   13. RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .portfolio-back {
+    padding: 16px;
+  }
+
+  .portfolio-back-title {
+    font-size: 17px;
+  }
+
+  .portfolio-back-label {
+    font-size: 10px;
+  }
+
+  .portfolio-back-service {
+    margin-bottom: 8px;
+    font-size: 11px;
+  }
+
+  .portfolio-back .portfolio-back-icon {
+    width: 55px;
+    height: 55px;
+    min-width: 55px;
+    min-height: 55px;
+    padding: 6px;
+  }
+
+  .portfolio-back-button {
+    margin-top: 10px;
+    padding: 8px 13px;
+    font-size: 11px;
+  }
+}
+
+
+/* =========================================================
+   14. ACCESSIBILITY - REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .portfolio-flip-inner {
+    transition: none;
+  }
+}
+
+/* Shared hero breadcrumb colors. */
+.project-hero .project-breadcrumb a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+}
+.project-hero .project-breadcrumb [aria-current="page"] {
+  color: #ff5a00;
+  font-weight: 600;
+}
+.project-hero .project-breadcrumb i,
+.project-hero .project-breadcrumb .breadcrumb-arrow {
+  color: rgba(255, 255, 255, 0.6);
+}

@@ -1,0 +1,7 @@
+﻿/* Services process styles are inherited through service.css.
+   Keep Residential heading styles from overriding this shared section. */
+.res-page .work-process .process-heading h2 { color: #fff;   letter-spacing: normal; }
+.res-page .work-process .process-step h3 { color: #fff; font-size: 14px; font-weight: 700; line-height: 1.4; letter-spacing: normal; }
+.res-page .work-process .process-step:hover h3 { color: #f15a24; }
+.res-page .work-process .process-heading h2 { font-weight: 800; line-height: 1.2; }
+.res-page .work-process .process-step h3 { font-size: 14px; font-weight: 700; line-height: 1.4; }
