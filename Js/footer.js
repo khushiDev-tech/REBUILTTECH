@@ -18,6 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="index.html"><i class="fa-solid fa-chevron-right"></i>Home</a></li>
             <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
             <li><a href="service.html"><i class="fa-solid fa-chevron-right"></i>Services</a></li>
+            <li><a href="equipment.html"><i class="fa-solid fa-chevron-right"></i>Equipment &amp; Machinery</a></li>
             <li><a href="project.html"><i class="fa-solid fa-chevron-right"></i>Projects</a></li>
             <li><a href="blog.html"><i class="fa-solid fa-chevron-right"></i>Blog</a></li>
             <li><a href="contact.html"><i class="fa-solid fa-chevron-right"></i>Contact</a></li>
@@ -97,9 +98,20 @@ document.addEventListener("DOMContentLoaded", function () {
           <h3 class="footer-title">Stay Updated</h3>
           <div class="title-line" aria-hidden="true"><span></span></div>
 
+          <div class="social-icons">
+            <a href="https://www.instagram.com/rebuilttechz8057/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/rebuilt-techz-3a6a2839b" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a href="https://www.facebook.com/share/1N7mWgN77t/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+
           <div class="newsletter">
             <h3>Newsletter</h3>
-            <p>Subscriptions are not available yet.</p>
             <p>
               Subscribe to receive our latest updates,
               projects and electrical solutions.
@@ -107,10 +119,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
             <form class="newsletter-form" id="newsletterForm">
               <input type="email" id="newsletterEmail"
-                disabled placeholder="Coming soon"
-                aria-label="Email address" required>
+                placeholder="Email address"
+                aria-label="Email address"
+                autocomplete="email" required>
 
-              <button type="submit" disabled aria-label="Subscribe (coming soon)">
+              <button type="submit" aria-label="Subscribe">
                 <i class="fa-solid fa-paper-plane"></i>
               </button>
             </form>
@@ -128,9 +141,9 @@ document.addEventListener("DOMContentLoaded", function () {
           <p>&copy; ${new Date().getFullYear()} Rebuilt Techz. All Rights Reserved.</p>
 
           <div class="bottom-links">
-            <span class="policy-pending">Privacy Policy ? coming soon</span>
+            <a href="privacy-policy.html">Privacy Policy</a>
             <span></span>
-            <span class="policy-pending">Terms &amp; Conditions ? coming soon</span>
+            <a href="terms-and-conditions.html">Terms &amp; Conditions</a>
           </div>
         </div>
       </div>
@@ -157,8 +170,39 @@ document.addEventListener("DOMContentLoaded", function () {
 
   newsletterForm.addEventListener("submit", function (event) {
     event.preventDefault();
-
-    newsletterMessage.textContent =
-      "Subscription service is not connected yet.";
+    submitNewsletter(
+      document.getElementById("newsletterEmail"),
+      newsletterForm.querySelector("button"),
+      newsletterMessage,
+    );
   });
 });
+
+async function submitNewsletter(input, button, message) {
+  const email = input.value.trim();
+  if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+    message.textContent = "Enter a valid email address.";
+    input.focus();
+    return;
+  }
+
+  button.disabled = true;
+  message.textContent = "Sending...";
+  try {
+    const response = await fetch("/api/newsletter", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
+    });
+    const data = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      throw new Error(data.error || "The subscription could not be sent.");
+    }
+    input.value = "";
+    message.textContent = "You are subscribed. Updates will go to this email.";
+  } catch (error) {
+    message.textContent = error.message || "The subscription could not be sent.";
+  } finally {
+    button.disabled = false;
+  }
+}

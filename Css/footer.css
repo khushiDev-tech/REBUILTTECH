@@ -326,6 +326,11 @@
   color: var(--footer-orange);
 }
 
+.footer .newsletter-form button:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
 .footer .newsletter-message {
   margin-top: 9px;
   font-size: 11px;

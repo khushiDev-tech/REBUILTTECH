@@ -16,5 +16,11 @@
                               "img/certificate-udyam-page-3.png",
                               "img/certificate-udyam-page-4.png",
                               "img/certificate-udyam-page-5.png"
-                          ]
+                          ],
+    "certificate-electrical-license":  [
+                                           "img/certificate-electrical-license.png"
+                                       ],
+    "certificate-supervisor":  [
+                                   "img/certificate-supervisor.png"
+                               ]
 }

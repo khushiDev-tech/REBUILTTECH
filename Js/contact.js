@@ -61,9 +61,9 @@ document.addEventListener("DOMContentLoaded", () => {
             ...quickContactCards.map(createQuickContactCard),
           );
 
-        // Frontend-only validation. No submission or email delivery occurs.
         const form = document.getElementById("contactForm");
         const success = document.getElementById("formSuccess");
+        const successText = document.getElementById("formSuccessText");
         if (form) {
           const fields = ["name", "phone", "email", "service", "message"].map(
             (id) => document.getElementById(id),
@@ -104,7 +104,13 @@ document.addEventListener("DOMContentLoaded", () => {
             });
             field.addEventListener("change", () => validate(field));
           });
-          form.addEventListener("submit", (event) => {
+          function showStatus(message, isError) {
+            if (!success || !successText) return;
+            successText.textContent = message;
+            success.classList.toggle("is-error", isError);
+            success.classList.add("show");
+          }
+          form.addEventListener("submit", async (event) => {
             event.preventDefault();
             const results = fields.map(validate);
             if (!results.every(Boolean)) {
@@ -112,9 +118,40 @@ document.addEventListener("DOMContentLoaded", () => {
               if (success) success.classList.remove("show");
               return;
             }
-            if (success) success.classList.add("show");
-            // Preserve enquiry details until a delivery service is connected.
-            fields.forEach((field) => field.removeAttribute("aria-invalid"));
+            const button = form.querySelector(".submit-btn");
+            const serviceField = document.getElementById("service");
+            button.disabled = true;
+            showStatus("Sending your enquiry...", false);
+            try {
+              const response = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({
+                  name: document.getElementById("name").value.trim(),
+                  phone: document.getElementById("phone").value.trim(),
+                  email: document.getElementById("email").value.trim(),
+                  service: serviceField.value,
+                  message: document.getElementById("message").value.trim(),
+                }),
+              });
+              const data = await response.json().catch(() => ({}));
+              if (!response.ok) {
+                throw new Error(data.error || "The enquiry could not be sent.");
+              }
+              form.reset();
+              fields.forEach((field) => field.removeAttribute("aria-invalid"));
+              showStatus(
+                "Your enquiry has been sent. We will get back to you shortly.",
+                false,
+              );
+            } catch (error) {
+              showStatus(
+                error.message || "The enquiry could not be sent. Please call or WhatsApp us.",
+                true,
+              );
+            } finally {
+              button.disabled = false;
+            }
           });
         }
         // Reveal animation only when supported and permitted.

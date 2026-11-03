@@ -1,0 +1,27 @@
+.legal-page { background: #fff; color: #34465e; font-family: "Poppins", sans-serif; }
+.legal-page *, .legal-page *::before, .legal-page *::after { box-sizing: border-box; }
+.legal-wrap { width: min(900px, calc(100% - 48px)); margin-inline: auto; }
+.legal-hero { padding: 40px 0 48px; background: linear-gradient(110deg, #061f47, #0b3566); color: #fff; }
+.legal-breadcrumb { display: flex; flex-wrap: wrap; gap: 12px; margin-bottom: 30px; font-size: 14px; }
+.legal-breadcrumb a { color: #fff; text-underline-offset: 4px; }
+.legal-breadcrumb [aria-current] { color: #ffad89; }
+.legal-kicker { color: #ffad89; font-size: 13px; font-weight: 600; letter-spacing: 2px; }
+.legal-hero h1 { margin: 12px 0 20px; font-size: clamp(30px, 5vw, 48px); line-height: 1.2; }
+.legal-hero p { max-width: 65ch; line-height: 1.8; }
+.legal-date { margin-top: 24px; font-size: 13px; color: #d2ddec; }
+.legal-content { padding-block: 20px 56px; }
+.legal-content section { margin-top: 32px; }
+.legal-content h2 { margin: 0 0 12px; color: #082d63; font-size: clamp(21px, 3vw, 26px); line-height: 1.4; }
+.legal-content p, .legal-contact address { margin: 0 0 16px; font-size: 15px; line-height: 1.9; overflow-wrap: anywhere; }
+.legal-content a { color: #082d63; text-underline-offset: 4px; }
+.legal-contact { padding: 24px; margin-top: 36px; border: 1px solid #dce5ef; border-radius: 12px; background: #f5f8fc; }
+.legal-contact address { font-style: normal; margin-bottom: 0; }
+.legal-related { display: flex; flex-wrap: wrap; gap: 20px 32px; margin-top: 28px; font-size: 14px; font-weight: 600; }
+.legal-page a:focus-visible, .legal-skip-link:focus-visible { outline: 3px solid #f15a24; outline-offset: 4px; }
+.legal-skip-link { position: fixed; top: 12px; left: 12px; z-index: 10001; padding: 12px 18px; background: #fff; color: #082d63; transform: translateY(-200%); }
+.legal-skip-link:focus { transform: translateY(0); }
+@media (max-width: 600px) {
+  .legal-wrap { width: calc(100% - 36px); }
+  .legal-hero { padding: 28px 0 32px; }
+  .legal-contact { padding: 20px; }
+}

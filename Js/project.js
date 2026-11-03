@@ -21,277 +21,231 @@ document.addEventListener("DOMContentLoaded", function () {
   ===================================================== */
 
   const projects = [
-
-    /* PROJECT 01 */
     {
-      name: "CKS Medicare Pvt Ltd",
-      category: "Healthcare",
-      icon: "fa-hospital",
-      image: "img/cks.png",
-      logo: "img/cks-logo.png",
-      description:
-        "Reliable electrical infrastructure solutions supporting safe and efficient healthcare facilities.",
-      services: [
+      "name": "CKS Medicare Pvt Ltd",
+      "category": "Healthcare",
+      "icon": "fa-hospital",
+      "image": "img/cks.png",
+      "logo": "img/cks-logo.png",
+      "description": "Reliable electrical infrastructure solutions supporting safe and efficient healthcare facilities.",
+      "services": [
         "Electrical Installation",
         "Power Distribution",
         "Electrical Maintenance",
         "Testing & Commissioning"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 02 */
     {
-      name: "Pink Pearl Hotel",
-      category: "Hospitality",
-      icon: "fa-hotel",
-      image: "img/pinkPearl.png",
-      logo: "img/pink-logo.png",
-      description:
-        "Modern electrical solutions designed to support dependable hospitality operations and guest comfort.",
-      services: [
+      "name": "Pink Pearl Hotel",
+      "category": "Hospitality",
+      "icon": "fa-hotel",
+      "image": "img/pinkPearl.png",
+      "logo": "img/pink-logo.png",
+      "description": "Modern electrical solutions designed to support dependable hospitality operations and guest comfort.",
+      "services": [
         "Electrical Installation",
         "Lighting Solutions",
         "Power Distribution",
         "Electrical Maintenance"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 03 */
     {
-      name: "Chokhi Dhani the Palace Hotel",
-      category: "Hospitality",
-      icon: "fa-hotel",
-      image: "img/chokhiDhani.png",
-      logo: "img/chokhiDhani-logo.png",
-      description:
-        "Efficient electrical infrastructure solutions for safe and reliable hospitality environments.",
-      services: [
+      "name": "Chokhi Dhani the Palace Hotel",
+      "category": "Hospitality",
+      "icon": "fa-hotel",
+      "image": "img/chokhiDhani.png",
+      "logo": "img/chokhiDhani-logo.png",
+      "description": "Efficient electrical infrastructure solutions for safe and reliable hospitality environments.",
+      "services": [
         "Electrical Infrastructure",
         "Indoor & Outdoor Lighting",
         "Power Distribution",
         "Testing & Commissioning"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 04 */
     {
-      name: "Swastik Electrotch Pvt Ltd",
-      category: "Industrial",
-      icon: "fa-industry",
-      image: "",
-      logo: "",
-      description:
-        "Electrical engineering solutions supporting efficient industrial infrastructure and daily operations.",
-      services: [
+      "name": "Swastik Electrotch Pvt Ltd",
+      "category": "Industrial",
+      "icon": "fa-industry",
+      "image": "",
+      "logo": "img/swastikelectrotechofficial_logo.jpg",
+      "description": "Electrical engineering solutions supporting efficient industrial infrastructure and daily operations.",
+      "services": [
         "Industrial Electrical Installation",
         "Power Distribution Systems",
         "Cable Laying & Termination",
         "Electrical Maintenance"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 05 */
     {
-      name: "JNU Hospital",
-      category: "Healthcare",
-      icon: "fa-hospital",
-      image: "",
-      logo: "",
-      description:
-        "Reliable electrical solutions designed to support safe and dependable healthcare infrastructure.",
-      services: [
+      "name": "JNU Hospital",
+      "category": "Healthcare",
+      "icon": "fa-hospital",
+      "image": "img/jnu-bg.jpg",
+      "logo": "img/JNUnewLogo.jpeg",
+      "description": "Reliable electrical solutions designed to support safe and dependable healthcare infrastructure.",
+      "services": [
         "Electrical Installation",
         "Power Distribution",
         "Emergency Power Systems",
         "Testing & Commissioning"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 06 */
     {
-      name: "The LNMIIT",
-      category: "Education",
-      icon: "fa-graduation-cap",
-      image: "img/lnmiit-bg.png",
-      logo: "img/lnmiit.png",
-      description:
-        "Electrical engineering solutions supporting safe, efficient and reliable educational infrastructure.",
-      services: [
+      "name": "The LNMIIT",
+      "category": "Education",
+      "icon": "fa-graduation-cap",
+      "image": "img/lnmiit-bg.png",
+      "logo": "img/lnmiit.png",
+      "description": "Electrical engineering solutions supporting safe, efficient and reliable educational infrastructure.",
+      "services": [
         "Campus Electrical Infrastructure",
         "Lighting Installation",
         "Power Distribution",
         "Electrical Maintenance"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 07 */
     {
-      name: "IITJ (Jodhpur)",
-      category: "Education",
-      icon: "fa-graduation-cap",
-      image: "",
-      logo: "",
-      description:
-        "Dependable electrical infrastructure solutions supporting modern educational and research facilities.",
-      services: [
+      "name": "IITJ (Jodhpur)",
+      "category": "Education",
+      "icon": "fa-graduation-cap",
+      "image": "img/iitj-bg.avif",
+      "logo": "img/Institute Logo.jpeg",
+      "description": "Dependable electrical infrastructure solutions supporting modern educational and research facilities.",
+      "services": [
         "Institutional Electrical Works",
         "Power Distribution",
         "Cable Laying & Termination",
         "Testing & Commissioning"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 08 */
     {
-      name: "The TCS Centers",
-      category: "Corporate",
-      icon: "fa-building",
-      image: "",
-      logo: "",
-      description:
-        "Efficient electrical infrastructure solutions for reliable corporate facilities and operations.",
-      services: [
+      "name": "The TCS Centers",
+      "category": "Corporate",
+      "icon": "fa-building",
+      "image": "img/TCS-bg.webp",
+      "logo": "img/tcs-tata-consultancy-services2792.logowik.com.webp",
+      "description": "Efficient electrical infrastructure solutions for reliable corporate facilities and operations.",
+      "services": [
         "Commercial Electrical Installation",
         "Office Lighting Systems",
         "Power Distribution",
         "Electrical Maintenance"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 09 */
     {
-      name: "L&T",
-      category: "Engineering",
-      icon: "fa-gears",
-      image: "",
-      logo: "",
-      description:
-        "Electrical engineering solutions supporting industrial development and infrastructure requirements.",
-      services: [
+      "name": "L&T",
+      "category": "Engineering",
+      "icon": "fa-gears",
+      "image": "img/L&T-bg.webp",
+      "logo": "img/L&T.png",
+      "description": "Electrical engineering solutions supporting industrial development and infrastructure requirements.",
+      "services": [
         "Electrical Engineering Works",
         "Industrial Power Distribution",
         "Cable Installation",
         "Testing & Commissioning"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 10 */
     {
-      name: "CISF",
-      category: "Government",
-      icon: "fa-shield-halved",
-      image: "img/cisf.png",
-      logo: "img/cisf-logo.png",
-      description:
-        "Dependable electrical infrastructure solutions supporting essential government facilities.",
-      services: [
+      "name": "CISF",
+      "category": "Government",
+      "icon": "fa-shield-halved",
+      "image": "img/cisf.png",
+      "logo": "img/cisf-logo.png",
+      "description": "Dependable electrical infrastructure solutions supporting essential government facilities.",
+      "services": [
         "Government Building Electrical Works",
         "Lighting Installation",
         "Power Distribution",
         "Electrical Maintenance"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 11 */
     {
-      name: "PWD",
-      category: "Government",
-      icon: "fa-landmark",
-      image: "img/pwd-bg.png",
-      logo: "img/pwd.png",
-      description:
-        "Electrical infrastructure solutions designed for efficient and reliable public facilities.",
-      services: [
+      "name": "PWD",
+      "category": "Government",
+      "icon": "fa-landmark",
+      "image": "img/pwd-bg.png",
+      "logo": "img/pwd.png",
+      "description": "Electrical infrastructure solutions designed for efficient and reliable public facilities.",
+      "services": [
         "Public Infrastructure Electrical Works",
         "Electrical Installation",
         "Power Distribution",
         "Testing & Commissioning"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 12 */
     {
-      name: "CPWD",
-      category: "Government",
-      icon: "fa-landmark",
-      image: "img/cpwd-bg.png",
-      logo: "img/cpwd.png",
-      description:
-        "Electrical infrastructure solutions supporting reliable power distribution and government facilities.",
-      services: [
+      "name": "CPWD",
+      "category": "Government",
+      "icon": "fa-landmark",
+      "image": "img/cpwd-bg.png",
+      "logo": "img/cpwd.png",
+      "description": "Electrical infrastructure solutions supporting reliable power distribution and government facilities.",
+      "services": [
         "Government Electrical Infrastructure",
         "Building Electrical Installation",
         "Lighting Systems",
         "Electrical Maintenance"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 13 */
     {
-      name: "Canara Bank",
-      category: "Banking",
-      icon: "fa-building-columns",
-      image: "img/canara.png",
-      logo: "img/c-logo.png",
-      description:
-        "Reliable electrical solutions supporting safe and efficient banking infrastructure.",
-      services: [
+      "name": "Canara Bank",
+      "category": "Banking",
+      "icon": "fa-building-columns",
+      "image": "img/canara.png",
+      "logo": "img/c-logo.png",
+      "description": "Reliable electrical solutions supporting safe and efficient banking infrastructure.",
+      "services": [
         "Commercial Electrical Installation",
         "Lighting Solutions",
         "Power Distribution",
         "Electrical Maintenance"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 14 */
     {
-      name: "Alkem Laboratories Ltd",
-      category: "Pharmaceuticals",
-      icon: "fa-flask",
-      image: "img/alkem.png",
-      logo: "img/alkem-logo.png",
-      description:
-        "Electrical engineering solutions supporting dependable pharmaceutical facility operations.",
-      services: [
+      "name": "Alkem Laboratories Ltd",
+      "category": "Pharmaceuticals",
+      "icon": "fa-flask",
+      "image": "img/alkem.png",
+      "logo": "img/alkem-logo.png",
+      "description": "Electrical engineering solutions supporting dependable pharmaceutical facility operations.",
+      "services": [
         "Industrial Electrical Installation",
         "Power Distribution Systems",
         "Cable Laying & Termination",
         "Testing & Commissioning"
       ],
-      link: ""
+      "link": ""
     },
-
-    /* PROJECT 15 */
     {
-      name: "Barala Hospital",
-      category: "Healthcare",
-      icon: "fa-hospital",
-      image: "img/barala.png",
-      logo: "img/barala-logo.png",
-      description:
-        "Safe and reliable electrical infrastructure solutions supporting modern healthcare environments.",
-      services: [
+      "name": "Barala Hospital",
+      "category": "Healthcare",
+      "icon": "fa-hospital",
+      "image": "img/barala.png",
+      "logo": "img/barala-logo.png",
+      "description": "Safe and reliable electrical infrastructure solutions supporting modern healthcare environments.",
+      "services": [
         "Hospital Electrical Installation",
         "Power Distribution",
         "Emergency Lighting",
         "Electrical Maintenance"
       ],
-      link: ""
+      "link": ""
     }
-
   ];
 
 

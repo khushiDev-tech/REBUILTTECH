@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
           <div class="working-hours">
             <i class="fa-regular fa-clock"></i>
-            <span>Mon - Sat : 9:00 AM - 7:00 PM</span>
+            <span>Mon - Sat : 9:00 AM - 6:00 PM</span>
           </div>
         </div>
 
@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <li><a href="index.html">Home</a></li>
             <li><a href="about.html">About Us</a></li>
             <li><a href="service.html">Services</a></li>
+            <li><a href="equipment.html">Equipment &amp; Machinery</a></li>
             <li><a href="project.html">Projects</a></li>
             <li><a href="blog.html">Blog</a></li>
             <li><a href="contact.html">Contact</a></li>

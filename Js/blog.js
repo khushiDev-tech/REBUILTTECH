@@ -20,39 +20,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const blogs = [
     {
       "id": 1,
-      "image": "Power-Systems.png",
+      "image": "The Future of Power Distribution in India.png",
       "date": "25 Sep 2026",
       "category": "Industry Trends",
       "title": "The Future of Power Distribution in India: Key Trends to Watch",
       "description": "India’s power sector is entering a new era. With rising demand from industries, smart cities, and households, the way electricity is distributed will define the nation’s growth story....",
-      "link": "blog-power-distribution.html"
+      "link": "blog.html?article=power-distribution"
     },
     {
       "id": 2,
-      "image": "Earthing-Protection.png",
+      "image": "Golden-Hour Power Substation Montage.png",
       "date": "18 Sep 2026",
       "category": "Safety & Compliance",
       "title": "Top 10 Electrical Safety Practices for Industrial Sites",
       "description": "Electrical safety isn’t just a checklist — it’s the foundation of every successful industrial operation. In high-power environments, even a minor oversight can lead to serious hazards....",
-      "link": "blog-electrical-safety.html"
+      "link": "blog.html?article=electrical-safety"
     },
     {
       "id": 3,
-      "image": "electrical-panel.png",
+      "image": "Golden-Hour Power Substation Panorama.png",
       "date": "12 Sep 2026",
       "category": "Substation & Transmission",
       "title": "Understanding Substation Components and Their Role",
-      "description": "Modern industries depend on substations to deliver stable, efficient, and safe electrical power. A wellengineered substation is not just a collection of equipment — it’s a coordinated...",
-      "link": "blog-substation-components.html"
+      "description": "Modern industries depend on substations to deliver stable, efficient, and safe electrical power. A well-engineered substation is not just a collection of equipment — it’s a coordinated...",
+      "link": "blog.html?article=substation-components"
     },
     {
       "id": 4,
-      "image": "Electrical-Infrastructure.png",
+      "image": "Renewable Energy Integration.png",
       "date": "08 Sep 2026",
       "category": "Electrical Solutions",
       "title": "Renewable Energy Integration: Opportunities & Challenges",
       "description": "India’s energy landscape is shifting rapidly toward sustainability. As industries and utilities embrace solar, wind, and hybrid systems, renewable integration has become both a technical...",
-      "link": "blog-renewable-energy.html"
+      "link": "blog.html?article=renewable-energy"
     },
     {
       "id": 5,
@@ -61,16 +61,16 @@ document.addEventListener("DOMContentLoaded", () => {
       "category": "Tips & Guides",
       "title": "A Beginner’s Guide to Electrical Panel Maintenance",
       "description": "Electrical panels are the nerve center of any industrial or commercial facility. They distribute power, protect circuits, and ensure smooth operation. Proper maintenance isn’t just about...",
-      "link": "blog-panel-maintenance.html"
+      "link": "blog.html?article=panel-maintenance"
     },
     {
       "id": 6,
-      "image": "Lighting-Solutions.png",
+      "image": "Golden Hour Substation Collaboration.png",
       "date": "28 Aug 2026",
       "category": "Project Insights",
       "title": "How to Choose the Right Electrical Partner for Your Project",
       "description": "Selecting the right electrical partner can make or break your project’s success. Whether you’re building an industrial facility, upgrading infrastructure, or integrating renewable...",
-      "link": "blog-electrical-partner.html"
+      "link": "blog.html?article=electrical-partner"
     }
   ];
 
@@ -370,7 +370,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     /* FORM SUBMIT */
 
-    form.addEventListener("submit", (event) => {
+    form.addEventListener("submit", async (event) => {
 
       event.preventDefault();
 
@@ -407,13 +407,27 @@ document.addEventListener("DOMContentLoaded", () => {
       }
 
 
-      /* BACKEND NOT CONNECTED */
+      const button = form.querySelector("button");
+      button.disabled = true;
+      message.textContent = "Sending...";
 
-      message.textContent =
-        "Newsletter subscription is not available yet. Please check back soon.";
-
-      // Add newsletter API integration here.
-      // Show success only after backend confirmation.
+      try {
+        const response = await fetch("/api/newsletter", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        });
+        const data = await response.json().catch(() => ({}));
+        if (!response.ok) {
+          throw new Error(data.error || "The subscription could not be sent.");
+        }
+        emailInput.value = "";
+        message.textContent = "You are subscribed. Updates will go to this email.";
+      } catch (error) {
+        message.textContent = error.message || "The subscription could not be sent.";
+      } finally {
+        button.disabled = false;
+      }
 
     });
 

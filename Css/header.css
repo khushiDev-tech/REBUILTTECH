@@ -132,7 +132,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
+  gap: 36px;
 }
 
 /* LOGO */
@@ -160,7 +160,7 @@ body {
 .nav-links {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 26px;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -393,11 +393,11 @@ body {
 
 @media (max-width: 1600px) {
   .nav-inner {
-    gap: 18px;
+    gap: 28px;
   }
 
   .nav-links {
-    gap: 30px;
+    gap: 22px;
   }
 
   .nav-actions {

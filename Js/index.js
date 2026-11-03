@@ -602,7 +602,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const stats = [
     {
-      value: "500+",
+      value: "100+",
       label: "Happy Clients",
       icon: "fa-solid fa-users"
     },
