@@ -104,6 +104,20 @@ body {
   display: block;
 }
 
+@media (min-width: 901px) {
+  .eq-grid > a:last-child:nth-child(3n + 1) {
+    grid-column: 2;
+  }
+}
+
+@media (min-width: 641px) and (max-width: 900px) {
+  .eq-grid > a:last-child:nth-child(2n + 1) {
+    grid-column: 1 / -1;
+    width: calc((100% - 16px) / 2);
+    justify-self: center;
+  }
+}
+
 @media (max-width: 900px) {
   .eq-hero h1 {
     font-size: 40px;
